@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+b {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
+a {
+  color: #2895f3;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 860px) {
+  body{
+    width: 860px;
+  }
+}
+#header-box, #main, footer {
+  margin-top: 8px;
+  /* border: 3px solid #666666; */
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+#banner {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 6px 6px 0 0;
+}
+#header-box ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  vertical-align: middle;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#header-box ul li {
+  list-style: none;
+}
+#header-box ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+#header-box ul li a:hover {
+  color: #03a9f4;
+}
+section#main {
+  color: #CCCCCC;
+  background-color: #010F23;
+  padding: 10px;
+  overflow: hidden;
+}
+section#main p{
+  text-align: justify;
+}
+#img-saber{
+  float: left;
+  height: 200px;
+  margin-right: 6px;
+}
+#progression{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  color: white;
+}
+#progression div{
+  padding-bottom: 10px;
+}
+#progression h2{
+  margin-left: 10px;
+}
+#progression p{
+  margin-left: 10px;
+  margin-block-end: .8em;
+}
+#progression-pro{
+  flex: 1;
+  background-color: rgb(130, 62, 5);
+}
+#progression-fate{
+  flex: 1;
+  background-color: rgb(5, 67, 149);
+}
+#progression-ubw{
+  flex: 1;
+  background-color: rgb(134, 18, 5);
+}
+#progression-hf{
+  flex: 1;
+  background-color: rgb(98, 46, 98);
+}
+#progression-le{
+  flex: 1;
+  background-color: rgb(5, 115, 34);
+}
+.pb-wrapper{
+  width: 90%;
+  height: 0.7em;
+  border: 2px solid rgb(48, 52, 54);
+  background-color: black;
+  margin-left: 5%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.pb-bar{
+  height: 100%;
+  background-color: rgb(102, 118, 5);
+}
+.pb-text{
+  float: left;
+  padding-left: 10px;
+  color: rgb(152, 143, 129);
+}
+.flex-break{
+  width: 100%;
+  height: 0px;
+}
+footer{
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+#discord-logo{
+  height: 22px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.discord-text {
+  color: #7289DA;
+}
+.discord-text:hover {
+  text-decoration: none;
+}
+.push-right{
+  float: right;
+}
+.team-list {
+  list-style-type: square;
+}
