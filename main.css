@@ -7,12 +7,17 @@ html {
 }
 body {
   width: 100%;
-  min-height: 100%;
-  margin: 0;
-  background-color: #000;
+  margin: 0 auto;
+  background-color: #0f0f17;
   color: #fff;
-  margin-left: auto;
-  margin-right: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 8px;
+}
+header {
+  grid-row: 1;
+  background-color: #26273b4f;
 }
 b {
   font-weight: bold;
@@ -27,23 +32,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
-@media (min-width: 860px) {
-  body{
-    width: 860px;
-  }
-}
-#header-box, #main, footer {
-  margin-top: 8px;
-  /* border: 3px solid #666666; */
+#header-box, #main, footer, header {
   width: 100%;
   box-sizing: border-box;
   border-radius: 6px;
-}
-#banner {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  border-radius: 6px 6px 0 0;
 }
 #header-box ul {
   display: flex;
@@ -65,10 +57,13 @@ a:hover {
   color: #03a9f4;
 }
 section#main {
+  grid-row: 2;
+  max-width: 880px;
   color: #CCCCCC;
-  background-color: #010F23;
+  background-color: #26273B;
   padding: 10px;
   overflow: hidden;
+  margin: auto;
 }
 section#main p{
   text-align: justify;
@@ -76,7 +71,15 @@ section#main p{
 #img-saber{
   float: left;
   height: 200px;
-  margin-right: 6px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 700px), screen and (orientation: portrait) {
+  #img-saber {
+    margin: 20px auto;
+    float: initial;
+    display: block;
+  }
 }
 #progression{
   display: flex;
@@ -137,9 +140,10 @@ section#main p{
   height: 0px;
 }
 footer{
+  grid-row: 3;
   text-align: center;
-  margin-bottom: 10px;
   padding: 10px;
+  background-color: #26273b4f;
 }
 #discord-logo{
   height: 22px;
@@ -155,6 +159,13 @@ footer{
 .push-right{
   float: right;
 }
-.team-list {
+.team-list,li,ul {
   list-style-type: square;
+  text-align: center;
+  display: block;
+  padding: 0;
+}
+#logo_trad {
+  width: 40px;
+  vertical-align: middle;
 }

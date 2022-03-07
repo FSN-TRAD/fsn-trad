@@ -12,12 +12,11 @@
   <body>
     <header>
   <div id="header-box">
-    <img src="images/banner-alter.png" alt="Bannière" id="banner"/>
     <nav>
       <ul>
-        <li><a href="./">Accueil</a></li>
+        <li><a href="./index.html">Accueil</a></li>
         <li><a href="./progression.html">Progression</a></li>
-        <li><a href="./telechargements.html">Téléchargements</a></li>
+        <li><a href="./telechargements.html">Patchs</a></li>
         <li><a href="./a_propos.html">À propos</a></li>
       </ul>
     </nav>
@@ -27,7 +26,11 @@
       <h1>Traduction française de Fate/stay night [Réalta Nua] - Ultimate Edition</h1>
       <hr/>
       <p>
-        <img src="images/Saber.png" alt="Saber" id="img-saber">
+        <picture>
+					<source srcset="images/cg_saber.webp" type="image/webp">
+					<source srcset="images/cg_saber.jpg" type="image/jpg"> 
+					<img class="visuel" src="images/cg_saber.jpg" alt="CG Saber" id="img-saber">
+				</picture>
         Projet de traduction en français de l'un des visuals novels les plus connus produit par Type-Moon&nbsp;:
         <a href="https://vndb.org/v11" target="_blank" title="VNDB"> Fate/stay night</a>. La traduction est
         réalisée pour fonctionner avec l'<i>Ultimate Edition</i>, qui est une version faite des fans pour regrouper
@@ -51,6 +54,11 @@
     </section>
     <footer>
   ©2020-2022 FSN-TRAD
+  <picture>
+    <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+    <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+    <img class="visuel" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD" id="logo_trad">
+	</picture>
 </footer>
   </body>
 </html>
