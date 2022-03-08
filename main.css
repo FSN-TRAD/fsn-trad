@@ -9,7 +9,6 @@ html {
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
-
 body {
   width: 100%;
   margin: 0 auto;
@@ -30,6 +29,10 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 #header-box, #main, footer, header {
   width: 100%;
@@ -186,10 +189,10 @@ footer{
   display: flex;
   justify-content: space-evenly;
   flex-flow: wrap;
+  row-gap: 22px;
 }
 .tuto-container {
   display: inline-block;
-  margin-bottom: 22px;
 }
 .tuto {
   width: 120px;
