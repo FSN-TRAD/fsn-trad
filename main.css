@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+:root {
+  color-scheme: dark;
+}
+
 html {
   width: 100%;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
 }
+
 body {
   width: 100%;
   margin: 0 auto;
@@ -18,12 +23,6 @@ body {
 header {
   grid-row: 1;
   background-color: #26273b4f;
-}
-b {
-  font-weight: bold;
-}
-i {
-  font-style: italic;
 }
 a {
   color: #2895f3;
@@ -52,6 +51,9 @@ a:hover {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  min-width: 90px;
+  display: block;
+  text-align: center;
 }
 #header-box ul li a:hover {
   color: #03a9f4;
@@ -60,7 +62,7 @@ section#main {
   grid-row: 2;
   max-width: 880px;
   color: #CCCCCC;
-  background-color: #26273B;
+  /*background-color: #131749;*/ /*#26273B*/
   padding: 10px;
   overflow: hidden;
   margin: auto;
@@ -99,28 +101,39 @@ section#main p{
 }
 #progression-pro{
   flex: 1;
+}
+#progression-pro .pb-bar {
   background-color: rgb(130, 62, 5);
 }
 #progression-fate{
   flex: 1;
+}
+#progression-fate .pb-bar {
   background-color: rgb(5, 67, 149);
 }
 #progression-ubw{
   flex: 1;
+}
+#progression-ubw .pb-bar {
   background-color: rgb(134, 18, 5);
 }
 #progression-hf{
   flex: 1;
+}
+#progression-hf .pb-bar {
   background-color: rgb(98, 46, 98);
 }
 #progression-le{
   flex: 1;
+}
+#progression-le .pb-bar {
   background-color: rgb(5, 115, 34);
 }
 .pb-wrapper{
   width: 90%;
   height: 0.7em;
   border: 2px solid rgb(48, 52, 54);
+  border-style: inset;
   background-color: black;
   margin-left: 5%;
   border-radius: 10px;
@@ -169,22 +182,53 @@ footer{
   width: 40px;
   vertical-align: middle;
 }
+.tuto-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+.tuto-container {
+  display: inline-block;
+  margin-bottom: 22px;
+}
 .tuto {
-  width: 130px;
-  height: 60px;
+  width: 120px;
   border-radius: 24px;
-  padding: 6px;
-  margin: 6px;
+  padding: 16px;
+  margin: 4px;
   display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  vertical-align: middle;
   background-color: #26416d;
-}
-.tuto a {
-  margin: auto;
   color: #fff;
+  justify-content: center;
+  user-select: none;
 }
-.tuto a:hover {
+.tuto:hover {
   text-decoration: none;
+  background-color: #2c528f;
+}
+.tuto-author {
+  text-align: center;
+}
+
+.social {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+}
+.social-discord img, .social-github img {
+  width: 34px;
+  height: 34px;
+  background-color: #26273b4f;
+  border-radius: 15%;
+  padding: 8px;
+  margin: 2px;
+}
+.social-discord:hover img, .social-github:hover img {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1040px), screen and (orientation: portrait) {
+  .social {
+    display: none;
+  }
 }
