@@ -159,7 +159,7 @@ footer{
 .push-right{
   float: right;
 }
-.team-list,li,ul {
+.team-list,.team-list li,.team-list ul {
   list-style-type: square;
   text-align: center;
   display: block;
@@ -168,4 +168,23 @@ footer{
 #logo_trad {
   width: 40px;
   vertical-align: middle;
+}
+.tuto {
+  width: 130px;
+  height: 60px;
+  border-radius: 24px;
+  padding: 6px;
+  margin: 6px;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  background-color: #26416d;
+}
+.tuto a {
+  margin: auto;
+  color: #fff;
+}
+.tuto a:hover {
+  text-decoration: none;
 }
