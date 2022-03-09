@@ -149,7 +149,7 @@ section#main p{
 .pb-text{
   float: left;
   padding-left: 10px;
-  color: rgb(152, 143, 129);
+  color: rgb(160 157 152);
 }
 .flex-break{
   width: 100%;
@@ -180,6 +180,10 @@ footer{
   text-align: center;
   display: block;
   padding: 0;
+}
+.team-list h3 {
+  margin-top: 2em;
+  margin-bottom: 0.6em;
 }
 #logo_trad {
   width: 40px;
