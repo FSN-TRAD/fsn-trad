@@ -6,7 +6,6 @@
   --secondary-bg-color: #26273b4f;
 
   /* Inutilisées mais peuvent servir */
-  --progression-prologue: rgb(130, 62, 5);
   --progression-fate: rgb(5, 67, 149);
   --progression-ubw: rgb(134, 18, 5);
   --progression-hf: rgb(98, 46, 98);
@@ -89,13 +88,12 @@ hr {
 	background-color: whitesmoke;
 	left: 50%;
 	bottom: -10px;
-	transition: all 0.4s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .hover-container:hover .hover-title::after {
 	width: 100%;
 	left: 0;
 }
-
 
 section#main {
   grid-row: 2;
@@ -107,6 +105,58 @@ section#main {
 }
 section#main p{
   text-align: justify;
+}
+
+footer{
+  grid-row: 3;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--secondary-bg-color);
+}
+#logo_trad {
+  width: 40px;
+  vertical-align: middle;
+}
+
+/* Boutons liens externes */
+.social {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translate(0, -50%);
+}
+.social img {
+  width: 34px;
+  height: 34px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 15%;
+  padding: 8px;
+  margin: 2px;
+  transition: all 50ms ease-in-out;
+}
+.social-discord:hover img, .social-github:hover img, .social-youtube:hover img {
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1040px), screen and (orientation: portrait) {
+  .social {
+    display: none;
+  }
+}
+
+/* index */
+#discord-logo{
+  height: 22px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.discord-text {
+  color: #7289DA;
+}
+.discord-text:hover {
+  text-decoration: none;
+}
+.push-right{
+  float: right;
 }
 #img-saber{
   float: left;
@@ -124,73 +174,8 @@ section#main p{
     object-position: top;
   }
 }
-#progression{
-  display: flex;
-  column-gap: 10px;
-  width: 100%;
-  flex-wrap: wrap;
-  color: white;
-}
-#progression h2{
-  margin: 0 0 0 10px;
-  margin-block-end: 0.83em;
-}
-#progression-pro, #progression-fate, #progression-ubw,
-#progression-hf, #progression-le{
-  flex: 1;
-}
-#progression-le {
-  margin-bottom: 2em;
-}
-.pb-wrapper{
-  width: 90%;
-  height: 0.4em;
-  background-color: #2d2d2d;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 2px;
-}
-.pb-bar{
-  height: 100%;
-  background-color: rgb(5, 67, 149);
-}
-.pb-text-wrapper {
-  display: flex;
-  align-items: baseline;
-  place-content: space-between;
-  padding: 0 10px;
-  margin-block-start: 1.4em;
-  margin-block-end: 0.5em;
-}
-.pb-text{
-  float: left;
-  padding-left: 8px;
-  color: rgb(175 175 175);
-}
-.flex-break{
-  width: 100%;
-  height: 3em;
-}
-footer{
-  grid-row: 3;
-  text-align: center;
-  padding: 10px;
-  background-color: var(--secondary-bg-color);
-}
-#discord-logo{
-  height: 22px;
-  vertical-align: middle;
-  margin: 0 10px;
-}
-.discord-text {
-  color: #7289DA;
-}
-.discord-text:hover {
-  text-decoration: none;
-}
-.push-right{
-  float: right;
-}
+
+/* À propos */
 .team-list,.team-list li,.team-list ul {
   list-style-type: square;
   text-align: center;
@@ -200,67 +185,4 @@ footer{
 .team-list h3 {
   margin-top: 2em;
   margin-bottom: 0.6em;
-}
-#logo_trad {
-  width: 40px;
-  vertical-align: middle;
-}
-
-/* Boutons tuto */
-.tuto-list {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: wrap;
-  gap: 20px;
-}
-.tuto-container {
-  display: inline-block;
-}
-.tuto-author {
-  text-align: center;
-}
-/*.btn-grad {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}*/
-.btn-grad {background-image: linear-gradient(to right, #1A2980 0%, #1badac  51%, #1A2980  100%);}
-.btn-grad {
-  min-width: 90px;
-  margin: 10px 0;
-  padding: 14px 40px;
-  text-align: center;
-  text-transform: uppercase;
-  transition: 0.5s;
-  background-size: 200% auto;
-  color: #fff;            
-  border-radius: 6px;
-  display: block;
- }
- .btn-grad:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
- }
-
- 
-
-.social {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translate(0, -50%);
-}
-.social-discord img, .social-github img {
-  width: 34px;
-  height: 34px;
-  background-color: var(--secondary-bg-color);
-  border-radius: 15%;
-  padding: 8px;
-  margin: 2px;
-  transition: all 50ms ease-in-out;
-}
-.social-discord:hover img, .social-github:hover img {
-  transform: scale(1.1);
-}
-@media screen and (max-width: 1040px), screen and (orientation: portrait) {
-  .social {
-    display: none;
-  }
 }
