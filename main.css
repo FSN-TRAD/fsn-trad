@@ -2,6 +2,16 @@
 
 :root {
   color-scheme: dark;
+  --main-bg-color: #0f0f17;
+  --secondary-bg-color: #26273b4f;
+
+  /* Inutilisées mais peuvent servir */
+  --progression-prologue: rgb(130, 62, 5);
+  --progression-fate: rgb(5, 67, 149);
+  --progression-ubw: rgb(134, 18, 5);
+  --progression-hf: rgb(98, 46, 98);
+  --progression-last-episode: rgb(5, 115, 34);
+  --progression: rgb(102, 118, 5);
 }
 
 html {
@@ -12,7 +22,7 @@ html {
 body {
   width: 100%;
   margin: 0 auto;
-  background-color: #0f0f17;
+  background-color: var(--main-bg-color);
   color: #fff;
   min-height: 100vh;
   display: grid;
@@ -21,7 +31,7 @@ body {
 }
 header {
   grid-row: 1;
-  background-color: #26273b4f;
+  background-color: var(--secondary-bg-color);
 }
 a {
   color: #2895f3;
@@ -41,11 +51,14 @@ hr {
 }
 #header-box ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0;
   vertical-align: middle;
   width: 100%;
   flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 12px 0;
 }
 #header-box ul li {
   list-style: none;
@@ -53,19 +66,41 @@ hr {
 #header-box ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
   min-width: 90px;
   display: block;
   text-align: center;
+  padding: 4px 16px;
 }
-#header-box ul li a:hover {
-  color: #03a9f4;
+
+/* Effet de soulignement au survol */
+.hover-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+.hover-title {
+	position: relative;
+}
+.hover-title::after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 3px;
+	background-color: whitesmoke;
+	left: 50%;
+	bottom: -10px;
+	transition: all 0.4s ease-in-out;
+}
+.hover-container:hover .hover-title::after {
+	width: 100%;
+	left: 0;
+}
+
+
 section#main {
   grid-row: 2;
   max-width: 880px;
   color: #CCCCCC;
-  /*background-color: #131749;*/ /*#26273B*/
   padding: 10px;
   overflow: hidden;
   margin: auto;
@@ -84,82 +119,63 @@ section#main p{
     margin: 20px auto;
     float: initial;
     display: block;
+    object-fit: cover;
+    width: 100%;
+    object-position: top;
   }
 }
 #progression{
   display: flex;
+  column-gap: 10px;
   width: 100%;
   flex-wrap: wrap;
   color: white;
 }
-#progression div{
-  padding-bottom: 10px;
-}
 #progression h2{
-  margin-left: 10px;
+  margin: 0 0 0 10px;
+  margin-block-end: 0.83em;
 }
-#progression p{
-  margin-left: 10px;
-  margin-block-end: .8em;
-}
-#progression-pro{
+#progression-pro, #progression-fate, #progression-ubw,
+#progression-hf, #progression-le{
   flex: 1;
 }
-#progression-pro .pb-bar {
-  background-color: rgb(130, 62, 5);
-}
-#progression-fate{
-  flex: 1;
-}
-#progression-fate .pb-bar {
-  background-color: rgb(5, 67, 149);
-}
-#progression-ubw{
-  flex: 1;
-}
-#progression-ubw .pb-bar {
-  background-color: rgb(134, 18, 5);
-}
-#progression-hf{
-  flex: 1;
-}
-#progression-hf .pb-bar {
-  background-color: rgb(98, 46, 98);
-}
-#progression-le{
-  flex: 1;
-}
-#progression-le .pb-bar {
-  background-color: rgb(5, 115, 34);
+#progression-le {
+  margin-bottom: 2em;
 }
 .pb-wrapper{
   width: 90%;
-  height: 0.7em;
-  border: 2px solid rgb(48, 52, 54);
-  border-style: inset;
-  background-color: black;
-  margin-left: 5%;
-  border-radius: 10px;
+  height: 0.4em;
+  background-color: #2d2d2d;
+  margin: 0 auto;
   overflow: hidden;
+  border-radius: 2px;
 }
 .pb-bar{
   height: 100%;
-  background-color: rgb(102, 118, 5);
+  background-color: rgb(5, 67, 149);
+}
+.pb-text-wrapper {
+  display: flex;
+  align-items: baseline;
+  place-content: space-between;
+  padding: 0 10px;
+  margin-block-start: 1.4em;
+  margin-block-end: 0.5em;
 }
 .pb-text{
   float: left;
-  padding-left: 10px;
-  color: rgb(160 157 152);
+  padding-left: 8px;
+  color: rgb(175 175 175);
 }
 .flex-break{
   width: 100%;
-  height: 0px;
+  height: 3em;
 }
 footer{
   grid-row: 3;
   text-align: center;
   padding: 10px;
-  background-color: #26273b4f;
+  background-color: var(--secondary-bg-color);
 }
 #discord-logo{
   height: 22px;
@@ -189,33 +205,41 @@ footer{
   width: 40px;
   vertical-align: middle;
 }
+
+/* Boutons tuto */
 .tuto-list {
   display: flex;
   justify-content: space-evenly;
   flex-flow: wrap;
-  row-gap: 22px;
+  gap: 20px;
 }
 .tuto-container {
   display: inline-block;
 }
-.tuto {
-  width: 120px;
-  border-radius: 24px;
-  padding: 16px;
-  margin: 4px;
-  display: inline-flex;
-  background-color: #26416d;
-  color: #fff;
-  justify-content: center;
-  user-select: none;
-}
-.tuto:hover {
-  text-decoration: none;
-  background-color: #2c528f;
-}
 .tuto-author {
   text-align: center;
 }
+/*.btn-grad {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}*/
+.btn-grad {background-image: linear-gradient(to right, #1A2980 0%, #1badac  51%, #1A2980  100%);}
+.btn-grad {
+  min-width: 90px;
+  margin: 10px 0;
+  padding: 14px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fff;            
+  border-radius: 6px;
+  display: block;
+ }
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+ 
 
 .social {
   position: fixed;
@@ -226,10 +250,11 @@ footer{
 .social-discord img, .social-github img {
   width: 34px;
   height: 34px;
-  background-color: #26273b4f;
+  background-color: var(--secondary-bg-color);
   border-radius: 15%;
   padding: 8px;
   margin: 2px;
+  transition: all 50ms ease-in-out;
 }
 .social-discord:hover img, .social-github:hover img {
   transform: scale(1.1);
