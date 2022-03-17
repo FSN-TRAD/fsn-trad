@@ -10,6 +10,7 @@
 	  <meta name="theme-color" content="#0b3f71">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/progression.css">
+    <script type="text/javascript" src="scripts/progressbar.min.js"></script>
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
@@ -44,336 +45,456 @@
       <h1>Progression de la traduction</h1>
       <hr/>
       <div id="progression">
-        <div id="progression-pro">
-          <div class="pb-text-wrapper">
-    <h2>Prologue</h2>
-    <span class="pb-text">3/3</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div>        </div>
-        <div class="flex-break"></div>
         <div id="progression-fate"><h2>Fate</h2>
-        <div class="pb-text-wrapper">
-    <span>Jour 1</span>
-    <span class="pb-text">7/7</span>
+        <div id="container_fate" class="container"></div>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 1</span>
+      <span class="pb-text">7/7</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 2</span>
-    <span class="pb-text">5/5</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 2</span>
+      <span class="pb-text">5/5</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 3</span>
-    <span class="pb-text">11/11</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 3</span>
+      <span class="pb-text">11/11</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 4</span>
-    <span class="pb-text">6/6</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 4</span>
+      <span class="pb-text">6/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 5</span>
-    <span class="pb-text">6/6</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 5</span>
+      <span class="pb-text">6/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 6</span>
-    <span class="pb-text">9/9</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 6</span>
+      <span class="pb-text">9/9</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 7</span>
-    <span class="pb-text">3/3</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 7</span>
+      <span class="pb-text">3/3</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 8</span>
-    <span class="pb-text">5/5</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 8</span>
+      <span class="pb-text">5/5</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 9</span>
-    <span class="pb-text">7/7</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 9</span>
+      <span class="pb-text">7/7</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 10</span>
-    <span class="pb-text">4/4</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 10</span>
+      <span class="pb-text">4/4</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 11</span>
-    <span class="pb-text">10/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 11</span>
+      <span class="pb-text">10/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 12</span>
-    <span class="pb-text">6/6</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 12</span>
+      <span class="pb-text">6/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 13</span>
-    <span class="pb-text">10/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 13</span>
+      <span class="pb-text">10/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 14</span>
-    <span class="pb-text">7/7</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 14</span>
+      <span class="pb-text">7/7</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 15</span>
-    <span class="pb-text">11/11</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 15</span>
+      <span class="pb-text">11/11</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Épilogue</span>
-    <span class="pb-text">1/1</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Épilogue</span>
+      <span class="pb-text">1/1</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Tiger Dojo</span>
-    <span class="pb-text">14/14</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>TOTAL</span>
-    <span class="pb-text">100 %</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Tiger Dojo</span>
+      <span class="pb-text">14/14</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>        </div>
         <div id="progression-ubw"><h2>Unlimited Blade Works</h2>
-          <div class="pb-text-wrapper">
-    <span>Jour 3</span>
-    <span class="pb-text">6/6</span>
+          <div id="container_ubw" class="container"></div>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 3</span>
+      <span class="pb-text">6/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 4</span>
-    <span class="pb-text">5/5</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 4</span>
+      <span class="pb-text">5/5</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 5</span>
-    <span class="pb-text">10/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 5</span>
+      <span class="pb-text">10/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 6</span>
-    <span class="pb-text">9/9</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 6</span>
+      <span class="pb-text">9/9</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 7</span>
-    <span class="pb-text">9/9</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 7</span>
+      <span class="pb-text">9/9</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 8</span>
-    <span class="pb-text">7/7</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 8</span>
+      <span class="pb-text">7/7</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 9</span>
-    <span class="pb-text">6/6</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 9</span>
+      <span class="pb-text">6/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 10</span>
-    <span class="pb-text">5/5</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 10</span>
+      <span class="pb-text">5/5</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 11</span>
-    <span class="pb-text">3/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 11</span>
+      <span class="pb-text">3/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:30%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:30%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 12</span>
-    <span class="pb-text">0/8</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 12</span>
+      <span class="pb-text">0/8</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 13</span>
-    <span class="pb-text">0/8</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 13</span>
+      <span class="pb-text">0/8</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 14</span>
-    <span class="pb-text">8/8</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 14</span>
+      <span class="pb-text">8/8</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 15</span>
-    <span class="pb-text">9/9</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 15</span>
+      <span class="pb-text">9/9</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 16</span>
-    <span class="pb-text">10/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 16</span>
+      <span class="pb-text">10/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:100%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:100%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Épilogue</span>
-    <span class="pb-text">0/2</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Épilogue</span>
+      <span class="pb-text">0/2</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Tiger Dojo</span>
-    <span class="pb-text">6/10</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:60%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>TOTAL</span>
-    <span class="pb-text">76 %</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:76%"></div>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Tiger Dojo</span>
+      <span class="pb-text">6/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:60%"></div>
+    </div>
   </div>        </div>
         <div id="progression-hf"><h2>Heaven's Feel</h2>
-          <div class="pb-text-wrapper">
-    <span>Jour 4</span>
-    <span class="pb-text">0/7</span>
+          <div id="container_hf" class="container"></div>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 4</span>
+      <span class="pb-text">0/7</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 5</span>
-    <span class="pb-text">0/12</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 5</span>
+      <span class="pb-text">0/12</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 6</span>
-    <span class="pb-text">0/9</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 6</span>
+      <span class="pb-text">0/9</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 7</span>
-    <span class="pb-text">0/11</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 7</span>
+      <span class="pb-text">0/11</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 8</span>
-    <span class="pb-text">0/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 8</span>
+      <span class="pb-text">0/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 9</span>
-    <span class="pb-text">0/14</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 9</span>
+      <span class="pb-text">0/14</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 10</span>
-    <span class="pb-text">0/14</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 10</span>
+      <span class="pb-text">0/14</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 11</span>
-    <span class="pb-text">0/10</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 11</span>
+      <span class="pb-text">0/10</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 12</span>
-    <span class="pb-text">0/7</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 12</span>
+      <span class="pb-text">0/7</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 13</span>
-    <span class="pb-text">0/6</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 13</span>
+      <span class="pb-text">0/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 14</span>
-    <span class="pb-text">0/6</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 14</span>
+      <span class="pb-text">0/6</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 15</span>
-    <span class="pb-text">0/13</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 15</span>
+      <span class="pb-text">0/13</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Jour 16</span>
-    <span class="pb-text">0/14</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Jour 16</span>
+      <span class="pb-text">0/14</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Épilogue</span>
-    <span class="pb-text">0/2</span>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Épilogue</span>
+      <span class="pb-text">0/2</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>Tiger Dojo</span>
-    <span class="pb-text">0/16</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div><div class="pb-text-wrapper">
-    <span>TOTAL</span>
-    <span class="pb-text">0 %</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
+  <div class="barre-prog">
+    <div class="pb-text-wrapper">
+      <span>Tiger Dojo</span>
+      <span class="pb-text">0/16</span>
+    </div>
+    <div class="pb-wrapper">
+      <div class="pb-bar" style="width:0%"></div>
+    </div>
   </div>        </div>
         <div class="flex-break"></div>
-        <div id="progression-le">
-          <div class="pb-text-wrapper">
-    <h2>Last Episode</h2>
-    <span class="pb-text">0/1</span>
-  </div>
-  <div class="pb-wrapper">
-    <div class="pb-bar" style="width:0%"></div>
-  </div>        </div>
+
+        <div class="progression-bottom-container">
+          <div class="progression-bottom">
+            <div id="container_pro" class="container"></div>
+            Prologue
+          </div>
+          <div class="progression-bottom">
+            <div id="container_le" class="container"></div>
+            Last Episode
+          </div>
+        </div>
       </div>
     </section>
     <footer>
@@ -387,3 +508,152 @@
   </body>
 </html>
 
+<script>
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+// FATE
+var bar_fate = new ProgressBar.Circle(container_fate, {
+  color: '#aaa',
+  // This has to be the same size as the maximum width to prevent clipping
+  strokeWidth: 6,
+  trailWidth: 2,
+  easing: 'easeInOut',
+  trailColor: '#2d2d2d',
+  duration: 1400,
+  from: { color: 'rgb(5, 67, 149)', width: 2 },
+  to: { color: 'rgb(5, 67, 149)', width: 6 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value);
+    }
+
+  }
+});
+bar_fate.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar_fate.text.style.fontSize = '2rem';
+bar_fate.animate(100/100);  // Number from 0.0 to 1.0
+
+// UNLIMITED BLADE WORKS
+var bar_ubw = new ProgressBar.Circle(container_ubw, {
+  color: '#aaa',
+  // This has to be the same size as the maximum width to prevent clipping
+  strokeWidth: 6,
+  trailWidth: 2,
+  trailColor: '#2d2d2d',
+  easing: 'easeInOut',
+  duration: 1400,
+  from: { color: 'rgb(5, 67, 149)', width: 2 },
+  to: { color: 'rgb(5, 67, 149)', width: 6 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value);
+    }
+
+  }
+});
+bar_ubw.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar_ubw.text.style.fontSize = '2rem';
+bar_ubw.animate(76/100);  // Number from 0.0 to 1.0
+
+// HEAVEN'S FEEL
+var bar_hf = new ProgressBar.Circle(container_hf, {
+  color: '#aaa',
+  // This has to be the same size as the maximum width to prevent clipping
+  strokeWidth: 6,
+  trailWidth: 2,
+  trailColor: '#2d2d2d',
+  easing: 'easeInOut',
+  duration: 1400,
+  from: { color: 'rgb(5, 67, 149)', width: 2 },
+  to: { color: 'rgb(5, 67, 149)', width: 6 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value);
+    }
+
+  }
+});
+bar_hf.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar_hf.text.style.fontSize = '2rem';
+bar_hf.animate(0/100);  // Number from 0.0 to 1.0
+
+// PROLOGUE
+var bar_pro = new ProgressBar.Circle(container_pro, {
+  color: '#aaa',
+  // This has to be the same size as the maximum width to prevent clipping
+  strokeWidth: 6,
+  trailWidth: 2,
+  trailColor: '#2d2d2d',
+  easing: 'easeInOut',
+  duration: 1400,
+  from: { color: 'rgb(5, 67, 149)', width: 2 },
+  to: { color: 'rgb(5, 67, 149)', width: 6 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value);
+    }
+
+  }
+});
+bar_pro.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar_pro.text.style.fontSize = '2rem';
+bar_pro.animate(1.0);  // Number from 0.0 to 1.0
+
+// LAST EPISODE
+var bar_le = new ProgressBar.Circle(container_le, {
+  color: '#aaa',
+  // This has to be the same size as the maximum width to prevent clipping
+  strokeWidth: 6,
+  trailWidth: 2,
+  trailColor: '#2d2d2d',
+  easing: 'easeInOut',
+  duration: 1400,
+  from: { color: 'rgb(5, 67, 149)', width: 2 },
+  to: { color: 'rgb(5, 67, 149)', width: 6 },
+  // Set default step function for all animate calls
+  step: function(state, circle) {
+    circle.path.setAttribute('stroke', state.color);
+    circle.path.setAttribute('stroke-width', state.width);
+
+    var value = Math.round(circle.value() * 100);
+    if (value === 0) {
+      circle.setText('');
+    } else {
+      circle.setText(value);
+    }
+
+  }
+});
+bar_le.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+bar_le.text.style.fontSize = '2rem';
+bar_le.animate(0.0);  // Number from 0.0 to 1.0
+</script>

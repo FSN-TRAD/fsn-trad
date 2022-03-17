@@ -1,47 +1,75 @@
 #progression{
-    display: flex;
-    column-gap: 10px;
-    width: 100%;
-    flex-wrap: wrap;
-    color: white;
-  }
-  #progression h2{
-    margin: 0 0 0 10px;
-    margin-block-end: 0.83em;
-  }
-  #progression-pro, #progression-fate, #progression-ubw,
-  #progression-hf, #progression-le{
-    flex: 1;
-  }
-  #progression-le {
-    margin-bottom: 2em;
-  }
-  .pb-wrapper{
-    width: 90%;
-    height: 0.4em;
-    background-color: #2d2d2d;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 2px;
-  }
-  .pb-bar{
-    height: 100%;
-    background-color: rgb(5, 67, 149);
-  }
-  .pb-text-wrapper {
-    display: flex;
-    align-items: baseline;
-    place-content: space-between;
-    padding: 0 10px;
-    margin-block-start: 1.4em;
-    margin-block-end: 0.5em;
-  }
-  .pb-text{
-    float: left;
-    padding-left: 8px;
-    color: rgb(175 175 175);
-  }
-  .flex-break{
-    width: 100%;
-    height: 3em;
-  }
+  display: flex;
+  column-gap: 2%;
+  width: 100%;
+  flex-wrap: wrap;
+  color: white;
+}
+#progression h2{
+  margin: 0 0 0 10px;
+  margin-block-end: 0.83em;
+}
+#progression-fate, #progression-ubw, #progression-hf {
+  flex: 1;
+}
+#progression-le {
+  margin-bottom: 2em;
+}
+.pb-wrapper{
+  width: 80%;
+  height: 0.4em;
+  background-color: #2d2d2d;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.pb-bar{
+  height: 100%;
+  background-color: rgb(5, 67, 149);
+}
+.pb-text-wrapper {
+  display: flex;
+  align-items: baseline;
+  place-content: space-between;
+  margin-block-start: 1.5em;
+  margin-block-end: 0.4em;
+}
+.pb-text{
+  float: left;
+  padding: 0 16px;
+  color: rgb(175 175 175);
+  display: none;
+}
+.barre-prog:hover .pb-text {
+  display: block;
+}
+.flex-break{
+  width: 100%;
+  height: 3em;
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.progression-bottom-container {
+  display: flex;
+  place-content: space-evenly;
+  width: 100%;
+  flex-flow: wrap;
+  gap: 10px;
+}
+.progression-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.progression-bottom .container {
+  margin: initial;
+  float: left;
+}
