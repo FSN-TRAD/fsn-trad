@@ -186,3 +186,12 @@ footer{
   margin-top: 2em;
   margin-bottom: 0.6em;
 }
+
+/* Options */
+.options li {
+  margin: 6px 0;
+}
+.options h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
