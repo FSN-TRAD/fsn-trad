@@ -1,20 +1,22 @@
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Progression</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pour connaître l'avancement de la traduction, c'est ici.">
-    <meta property="og:image" content="https://fsn-trad.github.io/website/images/logo_fsn-trad_small.png" />
-	  <meta name="theme-color" content="#0b3f71">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/progression.css">
-    <script type="text/javascript" src="scripts/progressbar.min.js"></script>
-    <link rel="shortcut icon" href="images/fate-icon.ico"/>
-  </head>
-  <body>
-    <header>
+
+<head>
+  <meta charset="utf-8">
+  <title>Progression</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pour connaître l'avancement de la traduction, c'est ici.">
+  <meta property="og:image" content="https://fsn-trad.github.io/website/images/logo_fsn-trad_small.png" />
+  <meta name="theme-color" content="#0b3f71">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/progression.css">
+  <script type="text/javascript" src="scripts/progressbar.min.js"></script>
+  <link rel="shortcut icon" href="images/fate-icon.ico" />
+</head>
+
+<body>
+  <header>
   <div id="header-box">
     <nav>
       <ul>
@@ -25,7 +27,7 @@
       </ul>
     </nav>
   </div>
-</header>    <div class="social">
+</header>  <div class="social">
   <div class="social-discord">
     <a href="https://discord.gg/zGPcfCY" target="_blank" title="Rejoindre le serveur Discord">
       <img src="images/logo_discord.svg">
@@ -41,11 +43,12 @@
       <img src="images/logo_youtube.svg">
     </a>
   </div>
-</div>    <section id="main">
-      <h1>Progression de la traduction</h1>
-      <hr/>
-      <div id="progression">
-        <div id="progression-fate"><h2>Fate</h2>
+</div>  <section id="main">
+    <h1>Progression de la traduction</h1>
+    <hr />
+    <div id="progression">
+      <div id="progression-fate">
+        <h2>Fate</h2>
         <div id="container_fate" class="container"></div>
   <div class="barre-prog">
     <div class="pb-text-wrapper">
@@ -199,9 +202,10 @@
     <div class="pb-wrapper">
       <div class="pb-bar" style="width:100%"></div>
     </div>
-  </div>        </div>
-        <div id="progression-ubw"><h2>Unlimited Blade Works</h2>
-          <div id="container_ubw" class="container"></div>
+  </div>      </div>
+      <div id="progression-ubw">
+        <h2>Unlimited Blade Works</h2>
+        <div id="container_ubw" class="container"></div>
   <div class="barre-prog">
     <div class="pb-text-wrapper">
       <span>Jour 3</span>
@@ -286,10 +290,10 @@
   <div class="barre-prog">
     <div class="pb-text-wrapper">
       <span>Jour 12</span>
-      <span class="pb-text">88 %</span>
+      <span class="pb-text">100 %</span>
     </div>
     <div class="pb-wrapper">
-      <div class="pb-bar" style="width:87.5%"></div>
+      <div class="pb-bar" style="width:100%"></div>
     </div>
   </div>
   <div class="barre-prog">
@@ -345,9 +349,10 @@
     <div class="pb-wrapper">
       <div class="pb-bar" style="width:80%"></div>
     </div>
-  </div>        </div>
-        <div id="progression-hf"><h2>Heaven's Feel</h2>
-          <div id="container_hf" class="container"></div>
+  </div>      </div>
+      <div id="progression-hf">
+        <h2>Heaven's Feel</h2>
+        <div id="container_hf" class="container"></div>
   <div class="barre-prog">
     <div class="pb-text-wrapper">
       <span>Jour 4</span>
@@ -482,22 +487,22 @@
     <div class="pb-wrapper">
       <div class="pb-bar" style="width:0%"></div>
     </div>
-  </div>        </div>
-        <div class="flex-break"></div>
+  </div>      </div>
+      <div class="flex-break"></div>
 
-        <div class="progression-bottom-container">
-          <div class="progression-bottom">
-            <div id="container_pro" class="container"></div>
-            Prologue
-          </div>
-          <div class="progression-bottom">
-            <div id="container_le" class="container"></div>
-            Last Episode
-          </div>
+      <div class="progression-bottom-container">
+        <div class="progression-bottom">
+          <div id="container_pro" class="container"></div>
+          Prologue
+        </div>
+        <div class="progression-bottom">
+          <div id="container_le" class="container"></div>
+          Last Episode
         </div>
       </div>
-    </section>
-    <footer>
+    </div>
+  </section>
+  <footer>
   ©2022 FSN-TRAD
   <picture>
     <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
@@ -505,45 +510,53 @@
     <img class="visuel" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD" id="logo_trad">
 	</picture>
 </footer>
-  </body>
+</body>
+
 </html>
 
 <script>
-// progressbar.js@1.0.0 version is used
-// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+  // progressbar.js@1.0.0 version is used
+  // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
 
-updateProgress(container_fate, 1);
-updateProgress(container_ubw, 0.89);
-updateProgress(container_hf, 0);
-updateProgress(container_pro, 1);
-updateProgress(container_le, 0);
+  updateProgress(container_fate, 1);
+  updateProgress(container_ubw, 0.9);
+  updateProgress(container_hf, 0);
+  updateProgress(container_pro, 1);
+  updateProgress(container_le, 0);
 
-function updateProgress(container, $progress) {
-  var bar = new ProgressBar.Circle(container, {
-    color: '#fff',
-    // This has to be the same size as the maximum width to prevent clipping
-    strokeWidth: 6,
-    trailWidth: 2,
-    trailColor: '#2d2d2d',
-    easing: 'easeInOut',
-    duration: 1400,
-    from: { color: 'rgb(5, 67, 149)', width: 2 },
-    to: { color: 'rgb(5, 67, 149)', width: 6 },
-    // Set default step function for all animate calls
-    step: function(state, circle) {
-      circle.path.setAttribute('stroke', state.color);
-      circle.path.setAttribute('stroke-width', state.width);
+  /* Affiche les cercles de progression */
+  function updateProgress(container, $progress) {
+    var bar = new ProgressBar.Circle(container, {
+      color: '#fff',
+      // This has to be the same size as the maximum width to prevent clipping
+      strokeWidth: 6,
+      trailWidth: 2,
+      trailColor: '#2d2d2d',
+      easing: 'easeInOut',
+      duration: 1400,
+      from: {
+        color: 'rgb(5, 67, 149)',
+        width: 2
+      },
+      to: {
+        color: 'rgb(5, 67, 149)',
+        width: 6
+      },
+      // Set default step function for all animate calls
+      step: function(state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.path.setAttribute('stroke-width', state.width);
 
-      var value = Math.round(circle.value() * 100);
-      if (value === 0) {
-        circle.setText('');
-      } else {
-        circle.setText(value);
+        var value = Math.round(circle.value() * 100);
+        if (value === 0) {
+          circle.setText('');
+        } else {
+          circle.setText(value);
+        }
       }
-    }
-  });
-  bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-  bar.text.style.fontSize = '2rem';
-  bar.animate($progress);  // Number from 0.0 to 1.0
-}
+    });
+    bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar.text.style.fontSize = '2rem';
+    bar.animate($progress); // Number from 0.0 to 1.0
+  }
 </script>
