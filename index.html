@@ -9,6 +9,7 @@
     <meta property="og:image" content="https://fsn-trad.github.io/website/images/logo_fsn-trad_small.png" />
 	  <meta name="theme-color" content="#0b3f71">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
@@ -54,14 +55,17 @@
     
     <section id="main" name="main">
       <h1>Traduction française de Fate/stay night</h1>
-      <hr/>
+      
       <p>
         Traduction non officielle en français de l'un des visuals novels les plus connus produit par Type-Moon&nbsp;:
         <a href="https://vndb.org/v11" target="_blank" title="VNDB"> Fate/stay night</a>. La traduction est
-        réalisée pour fonctionner avec l'<i>
-        <a href ="https://forums.nrvnqsr.com/showthread.html/9101-Fate-Stay-Night-Realta-Nua-Ultimate-Edition-2022" target="_blank"> Ultimate Edition</a>
-        </i>, qui est une version faite par des fans pour regrouper toutes les routes en un jeu et vous proposer de multiples <a href="options.html">options</a>.
+        réalisée pour fonctionner avec
+        l'<a href ="https://forums.nrvnqsr.com/showthread.html/9101-Fate-Stay-Night-Realta-Nua-Ultimate-Edition-2022" target="_blank">Ultimate Edition</a>,
+        qui est une version faite par des fans pour regrouper toutes les routes en un jeu et vous proposer de multiples <a href="options.html">options</a>.
       </p>
+
+      <hr>
+
       <p>
         <picture>
           <source srcset="images/cg_saber.webp" type="image/webp">
@@ -74,14 +78,20 @@
         d'entre eux pourra s'approprier le Graal et faire exaucer son vœu le plus cher…<br/>
       </p>
 
-      <br>
       <hr>
-      <p>
+
+      <div class="discord">
         Pour plus d'informations, rejoignez notre serveur Discord !
-        <a href="https://discord.gg/zGPcfCY" target="_blank" class="discord-text">
-    	    <img src="images/logo_discord.svg" id="discord-logo" alt="discord logo">FSN TRAD
+        <a href="https://discord.gg/zGPcfCY" target="_blank" class="discord-link">
+    	    <img src="images/logo_discord.svg" id="discord-logo" alt="discord logo">
+          <div class="desc">
+            <div>FSN TRAD</div>
+            <div><span id="discordCount">0</span> personnes connectées</div>
+          </div>
   	    </a>
-      </p>
+        
+      </div>
+
     </section>
     <footer>
   ©2022 FSN-TRAD
@@ -92,4 +102,17 @@
 	</picture>
 </footer>
   </body>
+
+  <script>
+    var discord_key = "709021752101044225";
+    var xmlHttpRequest = new XMLHttpRequest();
+    xmlHttpRequest.open("GET", "https://discord.com/api/guilds/" + discord_key + "/widget.json", true);
+    xmlHttpRequest.onreadystatechange = function () {
+         if (this.readyState == 4 && this.status == 200) {
+             var d = JSON.parse(this.responseText);
+             document.getElementById("discordCount").innerHTML = d.presence_count;
+         }  
+     };  
+    xmlHttpRequest.send();
+  </script>
 </html>
