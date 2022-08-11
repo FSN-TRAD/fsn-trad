@@ -17,6 +17,7 @@ html {
   width: 100%;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
+  scroll-behavior:smooth;
 }
 body {
   width: 100%;
@@ -206,7 +207,6 @@ footer{
   text-shadow: 0px 2px 9px #ff2222;
 }
 .game-banner .text {
-  display: block;
   font-size: 1.3rem;
   margin-top: 8rem;
   color: #fff;
@@ -214,9 +214,23 @@ footer{
   border-radius: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 8px;
+  padding: 8px 0;
   text-decoration: none;
+  animation: versionfr 1.2s cubic-bezier(0.83, 0.12, 0.58, 1);
+  animation-delay: .6s;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
 }
+@keyframes versionfr {
+  from {width: 0; opacity: .8;}
+  to {width: 100%; opacity: 1;} 
+}
+
 .game-banner .stroke {
   -webkit-text-stroke: 10px #fff;
 }
