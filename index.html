@@ -8,8 +8,9 @@
     <meta name="description" content="Page d'accueil du projet de traduction en français de Fate/stay night [Réalta Nua].">
     <meta property="og:image" content="https://fsn-trad.github.io/website/images/logo_fsn-trad_small.png" />
 	  <meta name="theme-color" content="#0b3f71">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
@@ -72,20 +73,25 @@
             <!-- The four columns -->
             <div class="row">
               <div class="column">
-                <img src="images/cg_saber.jpg" alt="Nature" onclick="myFunction(this);">
+                <img src="images/cg_saber.jpg" alt="Saber" onclick="myFunction(this);">
               </div>
               <div class="column">
-                <img src="images/cg_tiger_dojo.jpg" alt="Snow" onclick="myFunction(this);">
+                <img src="images/cg_tiger_dojo.jpg" alt="Tiger Dojo" onclick="myFunction(this);">
               </div>
               <div class="column">
-                <img src="images/cg_archer.jpg" alt="Mountains" onclick="myFunction(this);">
+                <img src="images/cg_archer.jpg" alt="Archer" onclick="myFunction(this);">
               </div>
               <div class="column">
-                <img src="images/cg_rin.jpg" alt="Lights" onclick="myFunction(this);">
+                <img src="images/cg_rin.jpg" alt="Rin" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/cg_ecchi.jpg" alt="Ecchi" onclick="myFunction(this);">
               </div>
             </div>
           </main>
-          <img class="visuel" src="images/cg_saber.jpg" alt="CG Saber" id="mainImg">
+          <a data-fancybox="gallery" href="images/cg_saber.jpg" id="mainImgLink">
+            <img class="visuel" src="images/cg_saber.jpg" alt="CG Saber" id="mainImg">
+          </a>
         </div>
         
         <div>
@@ -120,17 +126,27 @@
 </footer>
   </body>
 
+  <script type="text/javascript" src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="scripts/jquery.fancybox.min"></script>
   <script>
+    // gallery
+    function myFunction(imgs) {
+      var mainImgLink = document.getElementById("mainImgLink");
+      var mainImg = document.getElementById("mainImg");
+      mainImg.src = imgs.src;
+      mainImgLink.href = imgs.src;
+    }
+
+    // discord total connected members
     var discord_key = "709021752101044225";
     var xmlHttpRequest = new XMLHttpRequest();
     xmlHttpRequest.open("GET", "https://discord.com/api/guilds/" + discord_key + "/widget.json", true);
     xmlHttpRequest.onreadystatechange = function () {
-         if (this.readyState == 4 && this.status == 200) {
-             var d = JSON.parse(this.responseText);
-             document.getElementById("discordCount").innerHTML = d.presence_count;
-         }  
-     };  
+      if (this.readyState == 4 && this.status == 200) {
+        var d = JSON.parse(this.responseText);
+        document.getElementById("discordCount").innerHTML = d.presence_count;
+      }  
+    };  
     xmlHttpRequest.send();
   </script>
-  <script src="scripts/gallery.js"></script>
 </html>
