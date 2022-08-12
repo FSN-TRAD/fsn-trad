@@ -66,17 +66,34 @@
 
       <hr>
 
-      <p>
-        <picture>
-          <source srcset="images/cg_saber.webp" type="image/webp">
-          <source srcset="images/cg_saber.jpg" type="image/jpg"> 
-          <img class="visuel" src="images/cg_saber.jpg" alt="CG Saber" id="img-saber">
-        </picture>
-      
-        <b>Synopsis&nbsp;: </b>La Guerre du Saint Graal comporte sept Masters qui s'affrontent dans la ville de Fuyuki
-        au Japon. À l'aide de leurs pouvoirs magiques et de leurs Servants qu'ils ont préalablement invoqués, le dernier
-        d'entre eux pourra s'approprier le Graal et faire exaucer son vœu le plus cher…<br/>
-      </p>
+      <div class="infoVN">
+        <div class="gallery">
+          <main>
+            <!-- The four columns -->
+            <div class="row">
+              <div class="column">
+                <img src="images/cg_saber.jpg" alt="Nature" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/cg_tiger_dojo.jpg" alt="Snow" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/cg_archer.jpg" alt="Mountains" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/cg_rin.jpg" alt="Lights" onclick="myFunction(this);">
+              </div>
+            </div>
+          </main>
+          <img class="visuel" src="images/cg_saber.jpg" alt="CG Saber" id="mainImg">
+        </div>
+        
+        <div>
+          <b>Synopsis&nbsp;: </b>La Guerre du Saint Graal comporte sept Masters qui s'affrontent dans la ville de Fuyuki
+          au Japon. À l'aide de leurs pouvoirs magiques et de leurs Servants qu'ils ont préalablement invoqués, le dernier
+          d'entre eux pourra s'approprier le Graal et faire exaucer son vœu le plus cher…
+        </div>
+      </div>
 
       <hr>
 
@@ -115,4 +132,5 @@
      };  
     xmlHttpRequest.send();
   </script>
+  <script src="scripts/gallery.js"></script>
 </html>

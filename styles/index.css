@@ -1,9 +1,3 @@
-#img-saber{
-  float: left;
-  height: 230px;
-  margin-right: 20px;
-  border-radius: 4px;
-}
 .game-banner {
   position: relative;
   width: 100%;
@@ -67,17 +61,76 @@
   -webkit-text-stroke: 10px #fff;
 }
 
-@media screen and (max-width: 700px), screen and (orientation: portrait) {
-  #img-saber {
-    margin: 20px auto;
-    float: initial;
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    object-position: top;
-  }
+
+/* Galerie */
+#mainImg {
+  height: 260px;
+  width: 340px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.infoVN {
+  display: flex;
+  gap: 16px;
+  text-align: justify;
+}
+.gallery {
+  display: flex;
+}
+main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 260px;
+  min-width: 110px;
+}
+main::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
 }
 
+main::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #1a2580 25%, #32819e 50%, #1a2580 75%); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  box-sizing: border-box;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+  border-radius: 2px;
+  height: 80px;
+  max-width: 100%;
+  display: block;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px), screen and (orientation: portrait) {
+  .infoVN {
+    flex-direction: column;
+  }
+  .gallery {
+    margin: 20px 0;
+  }
+  #mainImg {
+    display: block;
+    margin: 0 auto;
+    /*object-fit: cover;*/
+  }
+  main {
+    min-width: 90px;
+  }
+}
 
 /* discord */
 .discord {
