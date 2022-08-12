@@ -71,7 +71,7 @@
 }
 .infoVN {
   display: flex;
-  gap: 16px;
+  gap: 2rem;
   text-align: justify;
 }
 .gallery {
@@ -106,9 +106,10 @@ main::-webkit-scrollbar-thumb {
   opacity: 0.8; 
   cursor: pointer; 
   border-radius: 2px;
-  height: 80px;
+  max-height: 80px;
   max-width: 100%;
   display: block;
+  object-fit: contain;
 }
 
 .column img:hover {
@@ -119,13 +120,11 @@ main::-webkit-scrollbar-thumb {
   .infoVN {
     flex-direction: column;
   }
-  .gallery {
-    margin: 20px 0;
+  #mainImgLink {
+    margin: 0 auto;
   }
   #mainImg {
     display: block;
-    margin: 0 auto;
-    /*object-fit: cover;*/
   }
   main {
     min-width: 90px;

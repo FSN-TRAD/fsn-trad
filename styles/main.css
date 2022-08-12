@@ -17,7 +17,7 @@ html {
   width: 100%;
   min-height: 100%;
   font-family: 'Open Sans', sans-serif;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  /*grid-gap: 8px;*/
+  overflow: overlay;
 }
 header {
   background-color: var(--secondary-bg-color);
