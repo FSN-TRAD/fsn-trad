@@ -8,6 +8,9 @@
   --header-height: 52px;
 }
 
+* {
+  scroll-margin-top: var(--header-height);
+}
 html {
   width: 100%;
   min-height: 100%;
@@ -118,7 +121,6 @@ section#main {
   color: #CCCCCC;
   padding: 2em 1em;
   /*overflow: hidden; can't use with scroll margin*/
-  scroll-margin-top: var(--header-height);
   margin: auto;
 
   display: flex;
