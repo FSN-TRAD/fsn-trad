@@ -12,33 +12,50 @@
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
-    <header>
-  <div id="header-box">
-    <nav>
-      <ul>
-        <li class="hover-container"><a href="./" class="hover-title">Accueil</a></li>
-        <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
-        <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
-        <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>    <div class="social">
-  <div class="social-discord">
-    <a href="https://discord.gg/zGPcfCY" target="_blank" title="Rejoindre le serveur Discord">
-      <img src="images/logo_discord.svg">
-    </a>
-  </div>
-  <div class="social-github">
-    <a href="https://github.com/FSN-TRAD/FSN-FR/releases" target="_blank" title="Accéder aux patchs">
-      <img src="images/logo_github.svg">
-    </a>
-  </div>
-  <div class="social-youtube">
-    <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono" target="_blank" title="Mises au point YouTube">
-      <img src="images/logo_youtube.svg">
-    </a>
-  </div>
+    <div id="header-boxPlaceholder"></div>
+
+<header id="header-box">
+  <nav>
+    <ul>
+      <a href="./" id="link_home">
+        <picture>
+          <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+          <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+          <img id="logo_home" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD">
+        </picture>
+      </a>
+      <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
+      <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
+      <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  heightHeader()
+  window.addEventListener('resize', heightHeader)
+
+  function heightHeader() {
+    //set the height of the header box placeholder to the height of the header box
+    let headerHeight = document.getElementById('header-box').getBoundingClientRect().height + 'px'
+    document.getElementById('header-boxPlaceholder').style.height = headerHeight
+
+    //set the height to the css var --header-height
+    document.documentElement.style.setProperty('--header-height', headerHeight)
+  }
+</script>    <div class="social">
+  <a href="https://discord.gg/zGPcfCY"
+  target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
+    <img src="images/logo_discord.svg">
+  </a>
+  <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
+  target="_blank" title="Accéder aux patchs" id="social-github">
+    <img src="images/logo_github.svg">
+  </a>
+  <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
+  target="_blank" title="Mises au point YouTube" id="social-youtube">
+    <img src="images/logo_youtube.svg">
+  </a>
 </div>    <section id="main">
       <ul class="team-list">
         <li><h3>Chef de projet</h3>
@@ -95,10 +112,9 @@
       <p>
         Les logos et le jeu sont la propriété de Type-Moon. Pour utiliser ce patch de traduction vous devez posséder la version originale du jeu.
       </p>
-      <!--<p>
-        Le site est hébergé par OVH. 2 rue Kellermann - 59100 Roubaix - France.<br/>
-        Le site utilise des cookies à des fins de statistiques. Les données sont anonymisées et stockées sur le serveur du site. Elles ne seront communiquées à aucun tiers. L'adresse IP du visiteur peut être conservée dans les logs du serveur.
-      </p>-->
+      <p>
+        Site réalisé par RequinDr.
+      </p>
     </section>
     <footer>
   ©2022 FSN-TRAD

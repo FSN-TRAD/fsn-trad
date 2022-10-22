@@ -14,35 +14,52 @@
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
-    <header>
-  <div id="header-box">
-    <nav>
-      <ul>
-        <li class="hover-container"><a href="./" class="hover-title">Accueil</a></li>
-        <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
-        <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
-        <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>    <div class="social">
-  <div class="social-discord">
-    <a href="https://discord.gg/zGPcfCY" target="_blank" title="Rejoindre le serveur Discord">
-      <img src="images/logo_discord.svg">
-    </a>
-  </div>
-  <div class="social-github">
-    <a href="https://github.com/FSN-TRAD/FSN-FR/releases" target="_blank" title="Accéder aux patchs">
-      <img src="images/logo_github.svg">
-    </a>
-  </div>
-  <div class="social-youtube">
-    <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono" target="_blank" title="Mises au point YouTube">
-      <img src="images/logo_youtube.svg">
-    </a>
-  </div>
+    <div id="header-boxPlaceholder"></div>
+
+<header id="header-box">
+  <nav>
+    <ul>
+      <a href="./" id="link_home">
+        <picture>
+          <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+          <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+          <img id="logo_home" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD">
+        </picture>
+      </a>
+      <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
+      <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
+      <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  heightHeader()
+  window.addEventListener('resize', heightHeader)
+
+  function heightHeader() {
+    //set the height of the header box placeholder to the height of the header box
+    let headerHeight = document.getElementById('header-box').getBoundingClientRect().height + 'px'
+    document.getElementById('header-boxPlaceholder').style.height = headerHeight
+
+    //set the height to the css var --header-height
+    document.documentElement.style.setProperty('--header-height', headerHeight)
+  }
+</script>    <div class="social">
+  <a href="https://discord.gg/zGPcfCY"
+  target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
+    <img src="images/logo_discord.svg">
+  </a>
+  <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
+  target="_blank" title="Accéder aux patchs" id="social-github">
+    <img src="images/logo_github.svg">
+  </a>
+  <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
+  target="_blank" title="Mises au point YouTube" id="social-youtube">
+    <img src="images/logo_youtube.svg">
+  </a>
 </div>    
-    <div class="game-banner">
+    <section class="game-banner">
       <picture>
         <source srcset="images/game_cover.webp" type="image/webp">
         <source srcset="images/game_cover.jpg" type="image/jpg"> 
@@ -51,17 +68,15 @@
       <div class="title stroke">Fate/stay night<br>[Réalta Nua]<br><span class="ue">Ultimate Edition</span></div>
       <div class="title">Fate/stay night<br><span class="red">[</span>Réalta Nua<span class="red">]</span><br><span class="ue">Ultimate Edition</span>
       <a href="#main" class="text">version française du visual novel</a></div>
-      
-    </div>
+    </section>
     
     <section id="main" name="main">
       <h1>Traduction française de Fate/stay night</h1>
       
       <p>
         Traduction non officielle en français de l'un des visuals novels les plus connus produit par Type-Moon&nbsp;:
-        <a href="https://vndb.org/v11" target="_blank" title="VNDB"> Fate/stay night</a>. La traduction est
-        réalisée pour fonctionner avec
-        l'<a href ="https://forums.nrvnqsr.com/showthread.html/9101-Fate-Stay-Night-Realta-Nua-Ultimate-Edition-2022" target="_blank">Ultimate Edition</a>,
+        <a href="https://vndb.org/v11" target="_blank" title="VNDB"> Fate/stay night</a>. La traduction est réalisée pour fonctionner avec
+        l'<a href ="https://forums.nrvnqsr.com/showthread.php/9101-Fate-Stay-Night-Realta-Nua-Ultimate-Edition-2022" target="_blank">Ultimate Edition</a>,
         qui est une version faite par des fans pour regrouper toutes les routes en un jeu et vous proposer de multiples <a href="options.html">options</a>.
       </p>
 
@@ -70,32 +85,42 @@
       <div class="infoVN">
         <div class="gallery">
           <main>
-            <!-- The four columns -->
-            <div class="row">
-              <div class="column">
-                <img src="images/cg_saber.jpg" alt="Saber" onclick="myFunction(this);">
+            <!-- The columns -->
+            <div class="column">
+              <div class="row">
+                <img src="images/gallery/cg_invocation.jpg" alt="Invocation" onclick="myFunction(this);">
               </div>
-              <div class="column">
-                <img src="images/cg_tiger_dojo.jpg" alt="Tiger Dojo" onclick="myFunction(this);">
+              <div class="row">
+                <img src="images/gallery/cg_saber.jpg" alt="Saber" onclick="myFunction(this);">
               </div>
-              <div class="column">
-                <img src="images/cg_archer.jpg" alt="Archer" onclick="myFunction(this);">
+              <div class="row">
+                <img src="images/gallery/cg_school.jpg" alt="School" onclick="myFunction(this);">
               </div>
-              <div class="column">
-                <img src="images/cg_rin.jpg" alt="Rin" onclick="myFunction(this);">
+              <div class="row">
+                <img src="images/gallery/cg_archer.jpg" alt="Archer" onclick="myFunction(this);">
               </div>
-              <div class="column">
-                <img src="images/cg_ecchi.jpg" alt="Ecchi" onclick="myFunction(this);">
+              <div class="row">
+                <img src="images/gallery/cg_stone.jpg" alt="Stone" onclick="myFunction(this);">
+              </div>
+              <div class="row">
+                <img src="images/gallery/cg_rin.jpg" alt="Rin" onclick="myFunction(this);">
+              </div>
+              <div class="row">
+                <img src="images/gallery/cg_tiger_dojo.jpg" alt="Tiger Dojo" onclick="myFunction(this);">
+              </div>
+              <div class="row">
+                <img src="images/gallery/cg_ecchi.jpg" alt="Ecchi" onclick="myFunction(this);">
               </div>
             </div>
           </main>
-          <a data-fancybox="gallery" href="images/cg_saber.jpg" id="mainImgLink">
-            <img class="visuel" src="images/cg_saber.jpg" alt="CG Saber" id="mainImg">
+          <a data-fancybox="gallery" href="images/gallery/cg_invocation.jpg" id="mainImgLink">
+            <img class="visuel" src="images/gallery/cg_invocation.jpg" alt="CG invocation" id="mainImg">
           </a>
         </div>
         
         <div>
-          <b>Synopsis&nbsp;: </b>La Guerre du Saint Graal comporte sept Masters qui s'affrontent dans la ville de Fuyuki
+          <b>Synopsis </b><br>
+          La Guerre du Saint Graal comporte sept Masters qui s'affrontent dans la ville de Fuyuki
           au Japon. À l'aide de leurs pouvoirs magiques et de leurs Servants qu'ils ont préalablement invoqués, le dernier
           d'entre eux pourra s'approprier le Graal et faire exaucer son vœu le plus cher…
         </div>

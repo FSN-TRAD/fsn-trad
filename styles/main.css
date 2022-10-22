@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
   color-scheme: dark;
   --main-bg-color: #0b0b0e;/*#0d0d11*/
-  --secondary-bg-color: #2a2b3673;/*#2a2b364f;*/
-
-  /* Inutilisées mais peuvent servir */
-  --progression-fate: rgb(5, 67, 149);
-  --progression-ubw: rgb(134, 18, 5);
-  --progression-hf: rgb(98, 46, 98);
-  --progression-last-episode: rgb(5, 115, 34);
-  --progression: rgb(102, 118, 5);
+  /*--secondary-bg-color: #2a2b3673;*/
+  --secondary-bg-color: #262630;/*#2a2b364f;*/
+  --header-height: 52px;
 }
 
 html {
@@ -27,12 +22,6 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  overflow: overlay;
-}
-header {
-  background-color: var(--secondary-bg-color);
-  position: fixed;
-  z-index: 3;
 }
 a {
   color: #2895f3;
@@ -43,7 +32,14 @@ a:hover {
 }
 hr {
   margin: 2em 0;
-  border-style: solid;
+  border: none;
+}
+
+/* header */
+header {
+  background-color: var(--secondary-bg-color);
+  position: fixed;
+  z-index: 3;
 }
 #header-box, #main, footer, header {
   width: 100%;
@@ -52,25 +48,45 @@ hr {
 }
 #header-box ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 0;
   vertical-align: middle;
   width: 100%;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1em;
   margin: 0;
-  padding: 12px 0;
 }
 #header-box ul li {
   list-style: none;
+  padding: 10px 0;
 }
 #header-box ul li a {
-  color: white;
+  color: lightgrey;
   text-decoration: none;
   min-width: 90px;
   display: block;
   text-align: center;
   padding: 4px 16px;
+}
+#header-box ul li a:hover {
+  color: #fff
+}
+#link_home {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-self: center;
+}
+#logo_home {
+  height: 30px;
+  display: block;
+  filter: brightness(100) contrast(0.6);
+  transition: .1s;
+  min-width: 90px;
+  object-fit: contain;
+}
+#logo_home:hover {
+  filter: brightness(100);
 }
 
 /* Effet de soulignement au survol */
@@ -89,7 +105,7 @@ hr {
 	height: 3px;
 	background-color: whitesmoke;
 	left: 50%;
-	bottom: -12px;
+	bottom: -10px;
 	transition: all 0.3s ease-in-out;
 }
 .hover-container:hover .hover-title::after {
@@ -98,10 +114,11 @@ hr {
 }
 
 section#main {
-  max-width: 980px;
+  max-width: 1040px;
   color: #CCCCCC;
-  padding: 10px;
-  overflow: hidden;
+  padding: 2em 1em;
+  /*overflow: hidden; can't use with scroll margin*/
+  scroll-margin-top: var(--header-height);
   margin: auto;
 
   display: flex;
@@ -115,10 +132,10 @@ section#main p{
 }
 
 footer{
-  margin-top: 2rem;
   text-align: center;
   padding: 10px;
   background-color: var(--secondary-bg-color);
+  color: lightgray;
 }
 #logo_trad {
   width: 40px;
@@ -132,18 +149,24 @@ footer{
   right: 20px;
   transform: translate(0, -50%);
   z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.social a {
+  display: block;
+  background-color: var(--secondary-bg-color);
+  border-radius: 15%;
+  padding: 8px;
+  transition: all .1s ease-in-out;
+}
+.social a:hover {
+  transform: scale(1.2);
 }
 .social img {
   width: 34px;
   height: 34px;
-  background-color: var(--secondary-bg-color);
-  border-radius: 15%;
-  padding: 8px;
-  margin: 2px;
-  transition: all 50ms ease-in-out;
-}
-.social-discord:hover img, .social-github:hover img, .social-youtube:hover img {
-  transform: scale(1.1);
+  display: block;
 }
 @media screen and (max-width: 1040px), screen and (orientation: portrait) {
   .social {
@@ -158,17 +181,9 @@ footer{
   text-align: center;
   display: block;
   padding: 0;
+  margin: 0;
 }
 .team-list h3 {
   margin-top: 2em;
   margin-bottom: 0.6em;
-}
-
-/* Options */
-.options li {
-  margin: 0.8em 0;
-}
-.options h3 {
-  margin-top: 1.2rem;
-  margin-bottom: 0.8rem;
 }

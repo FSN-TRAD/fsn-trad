@@ -13,67 +13,96 @@
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
-    <header>
-  <div id="header-box">
-    <nav>
-      <ul>
-        <li class="hover-container"><a href="./" class="hover-title">Accueil</a></li>
-        <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
-        <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
-        <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>    <div class="social">
-  <div class="social-discord">
-    <a href="https://discord.gg/zGPcfCY" target="_blank" title="Rejoindre le serveur Discord">
-      <img src="images/logo_discord.svg">
-    </a>
-  </div>
-  <div class="social-github">
-    <a href="https://github.com/FSN-TRAD/FSN-FR/releases" target="_blank" title="Accéder aux patchs">
-      <img src="images/logo_github.svg">
-    </a>
-  </div>
-  <div class="social-youtube">
-    <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono" target="_blank" title="Mises au point YouTube">
-      <img src="images/logo_youtube.svg">
-    </a>
-  </div>
-</div>    <section id="main">    
+    <div id="header-boxPlaceholder"></div>
 
-      <p style="float:left">
-        Patch français conçu pour fonctionner avec <i>Fate／stay night [Réalta Nua] Ultimate Edition</i>
-        (<a href="https://mega.nz/folder/DMsXCIoD#ubkrOC40vxEJDAslcnScow" target="_blank">1.1.2</a>)<br>
-        <br>
-        L'Ultimate Edition vous propose plusieurs <a href="options.html">options</a>
-        pour améliorer votre expérience de jeu.
-      </p>
-      <a href="https://github.com/FSN-TRAD/FSN-FR/releases/latest/download/patch_lang_french.xp3" class="btn-grad download">
-        patch<br>v0.1.4 <img src="images/download.svg" alt="download">
+<header id="header-box">
+  <nav>
+    <ul>
+      <a href="./" id="link_home">
+        <picture>
+          <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+          <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+          <img id="logo_home" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD">
+        </picture>
       </a>
+      <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
+      <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
+      <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <h2>Tutoriels d'installation</h2>
-      <div class="tuto-list">
-        <div class="tuto-container">
-          <a href="https://archetype-moon.fr/installer-fate-stay-night-sur-windows-et-android#windows" target="_blank" class="btn-grad">
-            Windows
-          </a>
-          <div class="tuto-author">par Archetype:Moon</div>
-        </div>
+<script>
+  heightHeader()
+  window.addEventListener('resize', heightHeader)
 
-        <div class="tuto-container">
-          <a href="https://archetype-moon.fr/installer-fate-stay-night-sur-windows-et-android#android" target="_blank" class="btn-grad">
-            Android
-          </a>
-          <div class="tuto-author">par Archetype:Moon</div>
-        </div>
+  function heightHeader() {
+    //set the height of the header box placeholder to the height of the header box
+    let headerHeight = document.getElementById('header-box').getBoundingClientRect().height + 'px'
+    document.getElementById('header-boxPlaceholder').style.height = headerHeight
 
-        <div class="tuto-container">
-          <a href="https://docs.google.com/document/d/1RKth0eUm_80vrDvt1FAaoE3qPfXmGZnb/edit" target="_blank" class="btn-grad">
-            macOS
-          </a>
-          <div class="tuto-author"><a href="https://forums.nrvnqsr.com/member.html/12622-RadonCRM" target="blank_">par RadonCRM</a></div>
+    //set the height to the css var --header-height
+    document.documentElement.style.setProperty('--header-height', headerHeight)
+  }
+</script>    <div class="social">
+  <a href="https://discord.gg/zGPcfCY"
+  target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
+    <img src="images/logo_discord.svg">
+  </a>
+  <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
+  target="_blank" title="Accéder aux patchs" id="social-github">
+    <img src="images/logo_github.svg">
+  </a>
+  <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
+  target="_blank" title="Mises au point YouTube" id="social-youtube">
+    <img src="images/logo_youtube.svg">
+  </a>
+</div>    <section id="main">
+      
+      <div>
+        <p>
+          Patch français conçu pour fonctionner avec <i>Fate／stay night [Réalta Nua] Ultimate Edition</i>
+          (<a href="https://mega.nz/folder/DMsXCIoD#ubkrOC40vxEJDAslcnScow" target="_blank">1.1.2</a>)<br>
+          <br>
+          Cliquez <a href="options.html">ici</a> pour voir la liste des options de l'Ultimate Edition.
+        </p>
+        <a href="https://github.com/FSN-TRAD/FSN-FR/releases/latest/download/patch_lang_french.xp3" class="btn-grad download">
+          patch fr<br>v0.1.4 <img src="images/download.svg" alt="download">
+        </a>
+      </div>
+
+      <hr>
+
+      <div>
+        <h2>Tutoriels d'installation</h2>
+        <div class="tuto-list">
+          <div class="tuto-container">
+            <a href="https://archetype-moon.fr/installer-fate-stay-night-sur-windows-et-android#windows" target="_blank" class="btn-grad">
+              Windows
+            </a>
+            <div class="tuto-author">par Archetype:Moon</div>
+          </div>
+
+          <div class="tuto-container">
+            <a href="https://archetype-moon.fr/installer-fate-stay-night-sur-windows-et-android#android" target="_blank" class="btn-grad">
+              Android
+            </a>
+            <div class="tuto-author">par Archetype:Moon</div>
+          </div>
+
+          <div class="tuto-container">
+            <a href="https://youtu.be/PC_zEipYpi8" target="_blank" class="btn-grad">
+              IOS
+            </a>
+            <div class="tuto-author">via YouTube</div>
+          </div>
+
+          <div class="tuto-container">
+            <a href="https://docs.google.com/document/d/1RKth0eUm_80vrDvt1FAaoE3qPfXmGZnb/edit" target="_blank" class="btn-grad">
+              macOS
+            </a>
+            <div class="tuto-author"><a href="https://forums.nrvnqsr.com/member.php/12622-RadonCRM" target="blank_">par RadonCRM</a></div>
+          </div>
         </div>
       </div>
 

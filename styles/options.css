@@ -1,0 +1,52 @@
+section#main {
+    display:grid;
+    /*make three columns
+    the second max width is 1040px
+    */
+    grid-template-columns: 200px 1fr 200px;
+    justify-content: space-between;
+    gap: 1em;
+    max-width: 100%;
+}
+.options {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+.options li {
+    margin: 0.8em 0;
+  }
+  .options h3 {
+    margin-top: 2.6rem;
+    margin-block-end: 0.8em;
+  }
+
+#navOptionsContainer {
+    font-size: initial;
+}
+#navOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    padding: 1em;
+    background-color: var(--secondary-bg-color);
+    border-radius: 1em;
+    position: fixed;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+#navOptions a {
+    color: lightgray;
+}
+
+@media screen and (max-width: 700px), screen and (orientation: portrait) {
+    section#main {
+        grid-template-columns: 1fr;
+    }
+    #navOptions {
+        position: relative;
+    }
+    .options {
+        max-width: 100%;
+    }
+}

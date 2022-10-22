@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -8,61 +9,80 @@
     <meta property="og:image" content="https://fsn-trad.github.io/website/images/logo_fsn-trad_small.png" />
 	  <meta name="theme-color" content="#0b3f71">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/options.css">
     <link rel="shortcut icon" href="images/fate-icon.ico"/>
   </head>
   <body>
-    <header>
-  <div id="header-box">
-    <nav>
-      <ul>
-        <li class="hover-container"><a href="./" class="hover-title">Accueil</a></li>
-        <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
-        <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
-        <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>    <div class="social">
-  <div class="social-discord">
-    <a href="https://discord.gg/zGPcfCY" target="_blank" title="Rejoindre le serveur Discord">
-      <img src="images/logo_discord.svg">
-    </a>
-  </div>
-  <div class="social-github">
-    <a href="https://github.com/FSN-TRAD/FSN-FR/releases" target="_blank" title="Accéder aux patchs">
-      <img src="images/logo_github.svg">
-    </a>
-  </div>
-  <div class="social-youtube">
-    <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono" target="_blank" title="Mises au point YouTube">
-      <img src="images/logo_youtube.svg">
-    </a>
-  </div>
-</div>    <section id="main">
-      <h1>Options du patch</h1>
-	  Ces options sont celles de l'UE 1.1.0, elles sont différentes des versions précédentes.
-      <hr/>
+    <div id="header-boxPlaceholder"></div>
 
+<header id="header-box">
+  <nav>
+    <ul>
+      <a href="./" id="link_home">
+        <picture>
+          <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+          <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+          <img id="logo_home" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD">
+        </picture>
+      </a>
+      <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
+      <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
+      <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  heightHeader()
+  window.addEventListener('resize', heightHeader)
+
+  function heightHeader() {
+    //set the height of the header box placeholder to the height of the header box
+    let headerHeight = document.getElementById('header-box').getBoundingClientRect().height + 'px'
+    document.getElementById('header-boxPlaceholder').style.height = headerHeight
+
+    //set the height to the css var --header-height
+    document.documentElement.style.setProperty('--header-height', headerHeight)
+  }
+</script>    <div class="social">
+  <a href="https://discord.gg/zGPcfCY"
+  target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
+    <img src="images/logo_discord.svg">
+  </a>
+  <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
+  target="_blank" title="Accéder aux patchs" id="social-github">
+    <img src="images/logo_github.svg">
+  </a>
+  <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
+  target="_blank" title="Mises au point YouTube" id="social-youtube">
+    <img src="images/logo_youtube.svg">
+  </a>
+</div>    <section id="main">
+      <div id="navOptionsContainer">
+        <div id="navOptions"></div>
+      </div>
+      
       <div class="options">
+        <h1>Options du patch</h1>
         <h2>Langue</h2>
         Utilisez ce bouton pour changer la langue du jeu. La configuration des polices est sauvegardée par langue,
         vous pouvez donc définir votre police préférée par langue.
 
         <h2>Patch</h2>
         <ul>
-          <li><h3>Contenu textuel</h3>
+          <li id="textualContent"><h3>Contenu textuel</h3>
             <ul>
               <li>Classique : les textes de la version classique de 2004. (WIP)</li>
               <li>Réalta Nua : les textes du jeu correspondent à ceux de la version PC de RN.</li>
               <li>Mix : les textes du jeu sont un mélange de la version Réalta Nua et de la version Classique.</li>
             </ul>
           </li>
-          <li><h3>Musiques</h3>
+          <li id="Musics"><h3>Musiques</h3>
             <ul>
               <li>Fonctionne de la même façon que Contenu Textuel, mais pour les musiques.</li>
             </ul>
           </li>
-          <li><h3>Vidéos</h3>
+          <li id="Movies"><h3>Vidéos</h3>
             <ul>
               <li>Classique : les vidéos (openings) de la version classique de 2004 sont utilisées.</li>
               <li>Réalta Nua : les vidéos (openings) de la version PS2 sont utilisées.</li>
@@ -71,7 +91,7 @@
               <li>Sauter les vidéos en jeu : si le jeu crash au moment d'afficher les vidéos, vous pouvez utiliser cette option.</li>
             </ul>
           </li>
-          <li><h3>Censure</h3>
+          <li id="Censor"><h3>Censure</h3>
             <ul>
               <li>Affiche le contenu mature : le jeu affichera le contenu mature comme la consommation d'alcool par des mineurs,
                 la violence extrême et le gore, et les thèmes sexuels non graphiques, comme dans la version classique de 2004.</li>
@@ -87,7 +107,7 @@
                 travail de l'artiste à utiliser. (Le choix par défaut, Bellandy + Anonyme, offre sans doute la meilleure qualité).</li>
             </ul>
           </li>
-          <li><h3>Lecture des voix</h3>
+          <li id="voicePlayback"><h3>Lecture des voix</h3>
             <ul>
               <li>Jouer les voix désynchronisées : en raison de la censure effectuée sur les scripts de la version vita,
                 certaines voix ne correspondent pas au texte. Si vous ne connaissez pas le japonais, vous devriez probablement
@@ -107,14 +127,14 @@
                 japonais (PS2) et en Allemand (PC version RN).</li>
             </ul>
           </li>
-          <li><h3>Lecture des vidéos</h3>
+          <li id="moviePlayback"><h3>Lecture des vidéos</h3>
             <ul>
               <li>Afficher les sous-titres dans les vidéos (indisponible en français)</li>
               <li>Forcer l’utilisation de mpv pour les vidéos : cochez cette option si vous avez des problèmes à la lecture des vidéos.</li>
               <li>Qualité des vidéos : permet d'utiliser des vidéos de plus faible qualité en cas de problème de performance.</li>
             </ul>
           </li>
-          <li><h3>Options de l'interface</h3></li>
+          <li id="UIoptions"><h3>Options de l'interface</h3></li>
             <ul>
               <li>Galerie étendue : ajoute à la galerie plus de CGs de la version classique de 2004 et PS2 du jeu.</li>
               <li>Fusion des galeries : enlève certaines CGs dupliquées entre les routes et les réarrange à la façon de la version
@@ -126,7 +146,7 @@
                 personnages pour le bouton de lecture de la voix au lieu du bouton générique.</li>
 
               <li>Glyphes de fin de ligne pour mobiles : utilise le glyphe de fin de ligne de la version mobile (le curseur animé qui
-                attend une action de votre part) de la version mobile.</li>
+                attend une action de votre part).</li>
               <li>Fenêtre de texte pour mobiles : utilise la fenêtre de texte de la version mobile.</li>
               <li>Fenêtre de texte 4:3 en mode étendu : utilise une fenêtre de texte à la taille classique à la place d’une élargie.</li>
 
@@ -136,7 +156,7 @@
               <li>Afficher le logo TYPE-MOON au démarrage : lorsque désactivée, le jeu démarre directement.</li>
             </ul>
           </li>
-          <li><h3>Options</h3>
+          <li id="options"><h3>Options</h3>
             <ul>
               <li>Menu titre prologue : le jeu commence sans menu titre jusqu’à ce que vous ayez terminé le prologue. Seulement la version
                 PS2 disposait d’un menu de prologue, et cette option le restaure.</li>
@@ -145,6 +165,21 @@
             </ul>
           </li>
         </ul>
+
+        <script>
+          //make a link to each li that has an id
+          //and put them in the navOptions
+          var navOptions = document.getElementById("navOptions");
+          var lis = document.querySelectorAll("li[id]");
+          for (var i = 0; i < lis.length; i++) {
+            var li = lis[i];
+            var a = document.createElement("a");
+            a.href = "#" + li.id;
+            a.textContent = li.querySelector("h3").textContent;
+            navOptions.appendChild(a);
+          }
+          
+        </script>
 
       </div>
     </section>

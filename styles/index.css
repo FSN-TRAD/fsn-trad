@@ -10,7 +10,9 @@
   min-height: 540px;
   object-fit: cover;
   filter: brightness(0.8);
-  object-position: 0 40%;
+  object-position: 10% 40%;
+  background-color: #b58181;
+  display: flex;
 }
 .game-banner .title {
   position: absolute;
@@ -58,31 +60,37 @@
   from {width: 0; opacity: .8;}
   to {width: 100%; opacity: 1;} 
 }
-
 .game-banner .stroke {
   -webkit-text-stroke: 10px #fff;
 }
 
+h1 {
+  margin: 0;
+}
 
 /* Galerie */
 #mainImg {
-  height: 260px;
-  width: 340px;
+  height: 300px;
+  width: 400px;
+  max-width: 100%;
   border-radius: 4px;
   object-fit: cover;
 }
 .infoVN {
   display: flex;
-  gap: 2rem;
+  flex-direction: row;
+  gap: 1em;
   text-align: justify;
 }
 .gallery {
   display: flex;
+  flex: none;
+  margin: 0 auto;
 }
 main {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 260px;
+  height: 300px;
   min-width: 110px;
 }
 main::-webkit-scrollbar {
@@ -93,13 +101,12 @@ main::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #1a2580 25%, #32819e 50%, #1a2580 75%); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
-.row {
+.column {
   display: flex;
   flex-direction: column;
   gap: 8px 0;
 }
-/* The grid: Four equal columns that floats next to each other */
-.column {
+.row {
   box-sizing: border-box;
 }
 
@@ -113,7 +120,6 @@ main::-webkit-scrollbar-thumb {
   display: block;
   object-fit: contain;
 }
-
 .column img:hover {
   opacity: 1;
 }
@@ -121,9 +127,6 @@ main::-webkit-scrollbar-thumb {
 @media screen and (max-width: 700px), screen and (orientation: portrait) {
   .infoVN {
     flex-direction: column;
-  }
-  #mainImgLink {
-    margin: 0 auto;
   }
   #mainImg {
     display: block;
@@ -133,7 +136,7 @@ main::-webkit-scrollbar-thumb {
   }
 }
 
-/* discord */
+/* Discord box */
 .discord {
   margin: 0 auto;
   text-align: center;
@@ -145,6 +148,13 @@ main::-webkit-scrollbar-thumb {
   display: flex;
   color: #7289DA;
   align-self: center;
+  background-color: var(--secondary-bg-color);
+  border-radius: 1.6em;
+  padding: 1em;
+  transition: .5s;
+}
+.discord-link:hover {
+  border-radius: 3em;
 }
 .discord .desc {
   text-align: start;
