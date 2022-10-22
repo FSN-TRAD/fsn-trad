@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Commande pour lancer Fate/stay night [Réalta Nua].">
+    <meta property="og:image" content="https://fsn-trad.github.io/website/images/logo_fsn-trad_small.png" />
+	  <meta name="theme-color" content="#0b3f71">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/faq.css">
+    <link rel="shortcut icon" href="images/fate-icon.ico"/>
+  </head>
+  <body>
+    <div id="header-boxPlaceholder"></div>
+
+<header id="header-box">
+  <nav>
+    <ul>
+      <a href="./" id="link_home">
+        <picture>
+          <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+          <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+          <img id="logo_home" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD">
+        </picture>
+      </a>
+      <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
+      <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
+      <li class="hover-container"><a href="./faq.html" class="hover-title">FAQ</a></li>
+      <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
+    </ul>
+  </nav>
+
+  <noscript>
+    <div class="noscript">
+      <p>Vous devez activer JavaScript pour le bon fonctionnement de ce site.</p>
+    </div>
+  </noscript>
+</header>
+
+<script>
+  heightHeader()
+  window.addEventListener('resize', heightHeader)
+
+  function heightHeader() {
+    //set the height of the header box placeholder to the height of the header box
+    let headerHeight = document.getElementById('header-box').getBoundingClientRect().height + 'px'
+    document.getElementById('header-boxPlaceholder').style.height = headerHeight
+
+    //set the height to the css var --header-height
+    document.documentElement.style.setProperty('--header-height', headerHeight)
+  }
+</script>    <div class="social">
+  <a href="https://discord.gg/zGPcfCY"
+  target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
+    <img src="images/logo_discord.svg">
+  </a>
+  <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
+  target="_blank" title="Accéder aux patchs" id="social-github">
+    <img src="images/logo_github.svg">
+  </a>
+  <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
+  target="_blank" title="Mises au point YouTube" id="social-youtube">
+    <img src="images/logo_youtube.svg">
+  </a>
+</div>    <section id="main">
+      <h2 id="faq">FAQ</h2>
+      <div class="questions">
+        <details>
+          <summary>
+          Qu'est-ce que l'Ultimate Edition ?
+          </summary>
+            <div>
+            C'est une version du jeu faite par des fans qui rassemble les 3 routes de FSN en un seul jeu en
+            proposant plusieurs patchs pour donner une meilleure expérience. C'est la version que nous avons
+            choisie car elle continue d'être améliorée et est pour nous la meilleure à ce jour.
+            </div>
+        </details>
+
+        <details>
+          <summary>
+          Devrais-je jouer en mode classique ou Réalta ?
+          </summary>
+            <div>
+            La version classique est l'originale de 2004.<br>
+            La version Réalta est la version censurée sortie plus tard, mais pas seulement. Son texte a été
+            amélioré par moments.<br>
+            Nous avons traduit les deux textes donc vous pouvez choisir n'importe lequel. Mais si c'est un
+            conseil que vous recherchez, alors nous vous conseillons de jouer en mode "mix", qui combine le
+            meilleur des deux.
+            </div>
+        </details>
+
+        <details>
+          <summary>
+          Le patch contient-il les scènes +18 ?
+          </summary>
+            <div>
+            Oui ! Mais vous pouvez les désactiver dans l'onglet Patch -> Censure, ce qui aura pour effet de les
+            remplacer par les scènes tout public de la version Réalta.
+            </div>
+        </details>
+
+        <details>
+          <summary>
+          Depuis quelle langue avez-vous traduit ?
+          </summary>
+            <div>
+            Principalement depuis l'anglais, nous manquons de traducteurs capables de traduire depuis le japonais,
+            qui est la langue originale.
+            Malgré cela, plusieurs passages sont relus depuis le japonais et corrigent des erreurs de la traduction
+            de mirror moon. Nous savons que vous aimeriez tous que ce soit exclusivement depuis le japonais, et nous
+            aimerions aussi, mais ce n'est malheureusement pas possible sans plus de personnes qualifiées.
+            </div>
+        </details>
+
+        <details>
+          <summary>
+          Comment choisissez-vous la traduction pour les termes spécifiques ?
+          </summary>
+            <div>
+            Nous essayons le plus souvent de reprendre les termes connus par le public à travers Wakanim, Ototo et Pika
+            qui ont déjà publié officiellement du contenu Fate en France. Ils ne s'accordent pas toujours alors nous
+            faisons au mieux.
+            </div>
+        </details>
+
+        <details>
+          <summary>
+          Allez-vous traduire Fate/Hollow Ataraxia ?
+          </summary>
+            <div>
+            Ce n'est pas dans nos plans, FSN va encore nous occuper un long moment !
+            </div>
+        </details>
+
+        <details>
+          <summary>
+          </summary>
+            <div>
+            </div>
+        </details>
+      </div>
+
+      <h2 id="bugs">Bugs</h2>
+      <div>Commencez par vérifier que vous êtes sur la dernière version du patch français en allant sur le menu > aide.</div>
+      <div class="questions">
+        <details>
+          <summary>
+          Crash après le combat contre Berserker.
+          </summary>
+            <div>
+            Ouvrez votre invite de commande à l'emplacement du jeu (dossier avec fate.exe) et tapez la commande suivante :<br>
+            <input type="text" value="fate.exe -flowchartopenbyscenario=セイバールート一日目-00.ks -skiplabel=*page1" id="cmd-copy" readonly="readonly">
+            <a href="#" onclick="copyFct()" id="cmd-copy" class="docs-access">Copier</a><br>
+            Le jeu devrait se lancer à l'endroit après le combat. Vous pouvez à présent sauvegarder et relancer le jeu normalement.
+            </div>
+        </details>
+
+        <details>
+          <summary>
+            L'erreur "Script exception raised" apparaît au lancement du jeu.
+          </summary>
+            <div>
+            Vous aviez probablement déjà joué sur la version anglaise auparavant. Le jeu essaie donc de la charger alors
+            que vous l'avez supprimée. La solution consiste à la remettre, puis choisir "japonais" en jeu. Vous pourrez
+            alors à nouveau supprimer patch_lang_english et mettre patch_lang_french ! Vous n'aurez ensuite plus qu'à
+            changer la langue en français.
+            </div>
+        </details>
+      </div>
+
+      <script>
+        function copyFct() {
+          var copyText = document.getElementById("cmd-copy");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999);
+          document.execCommand("copy");
+        }
+      </script>
+
+    </section>
+    <footer>
+  ©2022 FSN-TRAD
+  <picture>
+    <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
+    <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
+    <img class="visuel" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD" id="logo_trad">
+	</picture>
+</footer>
+  </body>
+</html>
