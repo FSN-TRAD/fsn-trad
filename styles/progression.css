@@ -10,7 +10,7 @@
   margin-block-end: 0.83em;
   position: absolute;
   top: 0;
-  font-size: 4em;
+  font-size: min(6vw, 4em);
   color: #58575e;
   font-variant: all-small-caps;
   width: min-content;
@@ -86,5 +86,8 @@
 @media screen and (max-width: 400px) {
   #progression {
     flex-direction: column;
+  }
+  #progression h2 {
+    font-size: 4em;
   }
 }
