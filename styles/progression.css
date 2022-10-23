@@ -1,16 +1,27 @@
 #progression{
   display: flex;
-  column-gap: 2%;
+  gap: 2em;
   width: 100%;
   flex-wrap: wrap;
   color: white;
 }
 #progression h2{
-  margin: 0 0 0 10px;
+  margin: 0;
   margin-block-end: 0.83em;
+  position: absolute;
+  top: 0;
+  font-size: 4em;
+  color: #58575e;
+  font-variant: all-small-caps;
+  width: min-content;
+  line-height: 0.7em;
+  z-index: -1;
 }
 #progression-fate, #progression-ubw, #progression-hf {
   flex: 1;
+  position: relative;
+  padding-top: 100px;
+  overflow: hidden;
 }
 #progression-le {
   margin-bottom: 2em;
@@ -45,12 +56,11 @@
 }
 .flex-break{
   width: 100%;
-  height: 3em;
 }
 
 
 .container {
-  margin: 0 auto;
+  margin-left: auto;
   width: 100px;
   height: 100px;
   position: relative;
@@ -72,4 +82,10 @@
 .progression-bottom .container {
   margin: initial;
   float: left;
+}
+
+@media screen and (max-width: 400px) {
+  #progression {
+    flex-direction: column;
+  }
 }
