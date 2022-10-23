@@ -16,38 +16,9 @@
 </head>
 
 <body>
-  <div id="header-boxPlaceholder"></div>
-
-<header id="header-box">
-  <nav>
-    <ul>
-      <a href="./" id="link_home">
-        <picture>
-          <source srcset="images/logo_fsn-trad_small.webp" type="image/webp">
-          <source srcset="images/logo_fsn-trad_small.jpg" type="image/jpg"> 
-          <img id="logo_home" src="images/logo_fsn-trad_small.webp" alt="Logo FSN-TRAD">
-        </picture>
-      </a>
-      <li class="hover-container"><a href="./progression.html" class="hover-title">Progression</a></li>
-      <li class="hover-container"><a href="./patch.html" class="hover-title">Patch</a></li>
-      <li class="hover-container"><a href="./a_propos.html" class="hover-title">À propos</a></li>
-    </ul>
-  </nav>
-</header>
-
-<script>
-  heightHeader()
-  window.addEventListener('resize', heightHeader)
-
-  function heightHeader() {
-    //set the height of the header box placeholder to the height of the header box
-    let headerHeight = document.getElementById('header-box').getBoundingClientRect().height + 'px'
-    document.getElementById('header-boxPlaceholder').style.height = headerHeight
-
-    //set the height to the css var --header-height
-    document.documentElement.style.setProperty('--header-height', headerHeight)
-  }
-</script>  <div class="social">
+  <div id="headerContainer"></div>
+  <script src="header.js"></script>
+  <div class="social">
   <a href="https://discord.gg/zGPcfCY"
   target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
     <img src="images/logo_discord.svg">
