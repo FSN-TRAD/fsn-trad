@@ -110,7 +110,7 @@
     	    <img src="images/logo_discord.svg" id="discord-logo" alt="discord logo">
           <div class="desc">
             <div>FSN TRAD</div>
-            <div><span id="discordCount">0</span> personnes connectées</div>
+            <div id="discordCount"></div>
           </div>
   	    </a>
         
@@ -132,20 +132,20 @@
   <script>
     // gallery
     function setMainImg(imgs) {
-      var mainImgLink = document.getElementById("mainImgLink");
-      var mainImg = document.getElementById("mainImg");
-      mainImg.src = imgs.src;
+      let mainImgLink = document.getElementById("mainImgLink");
+      let mainImg = document.getElementById("mainImg");
       mainImgLink.href = imgs.src;
+      mainImg.src = imgs.src;
     }
 
     // discord total connected members
-    var discord_key = "709021752101044225";
-    var xmlHttpRequest = new XMLHttpRequest();
-    xmlHttpRequest.open("GET", "https://discord.com/api/guilds/" + discord_key + "/widget.json", true);
+    let discord_key = "709021752101044225";
+    let xmlHttpRequest = new XMLHttpRequest();
+    xmlHttpRequest.open("GET", `https://discord.com/api/guilds/${discord_key}/widget.json`, true);
     xmlHttpRequest.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var d = JSON.parse(this.responseText);
-        document.getElementById("discordCount").innerHTML = d.presence_count;
+        document.getElementById("discordCount").innerHTML = `${d.presence_count} personnes connectées`;
       }  
     };  
     xmlHttpRequest.send();
