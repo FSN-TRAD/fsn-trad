@@ -34,6 +34,11 @@ section#main {
   text-decoration: none;
 }
 
+.downloads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
 .download {
   background-color: #1A2980;
   color: #fff;

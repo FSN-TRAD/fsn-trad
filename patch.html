@@ -22,16 +22,20 @@
     </div>
 </noscript>    <div class="social">
   <a href="https://discord.gg/zGPcfCY"
-  target="_blank" title="Rejoindre le serveur Discord" id="social-discord">
+  target="_blank" title="Rejoindre le serveur Discord">
     <img src="images/logo_discord.svg">
   </a>
   <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
-  target="_blank" title="Accéder aux patchs" id="social-github">
+  target="_blank" title="Accéder aux patchs">
     <img src="images/logo_github.svg">
   </a>
   <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
-  target="_blank" title="Mises au point YouTube" id="social-youtube">
+  target="_blank" title="Mises au point YouTube">
     <img src="images/logo_youtube.svg">
+  </a>
+  <a href="https://twitter.com/FsnTrad"
+  target="_blank" title="Compte Twitter">
+    <img src="images/logo_twitter.svg">
   </a>
 </div>    <section id="main">
       
@@ -39,13 +43,48 @@
         <p>
           Patch français conçu pour fonctionner avec <i>Fate／stay night [Réalta Nua] Ultimate Edition</i>
           (<a href="https://mega.nz/folder/DMsXCIoD#ubkrOC40vxEJDAslcnScow" target="_blank">1.1.2</a>)<br>
-          <br>
           Cliquez <a href="options.html">ici</a> pour voir la liste des options de l'Ultimate Edition.
         </p>
-        <a href="https://github.com/FSN-TRAD/FSN-FR/releases/latest/download/patch_lang_french.xp3" class="btn-grad download">
-          patch fr<br>v0.1.4 <img src="images/download.svg" alt="download">
-        </a>
+        <h2>Téléchargement</h2>
+        <div class="downloads">
+          <div>
+            <a href="https://github.com/FSN-TRAD/FSN-FR/releases/latest/download/patch_lang_french.xp3" class="btn-grad download">
+              <div>patch fr<br><span id="numVer"></span></div>
+              <img src="images/download.svg" alt="download">
+            </a>
+            <a href="https://github.com/FSN-TRAD/FSN-FR/releases/latest/" target="_blank" title="GitHub">Changelog</a>
+            <div id="release-date"></div>
+          </div>
+          
+          <div>
+            <a href="https://github.com/FSN-TRAD/FSN-FR-beta/releases/latest/download/patch_lang_french.xp3" class="btn-grad download">
+              <div>patch fr<br><span id="numVerBeta">beta</span></div>
+              <img src="images/download.svg" alt="download">
+            </a>
+            <a href="https://github.com/FSN-TRAD/FSN-FR-beta/releases/latest/" target="_blank" title="GitHub">Changelog</a>
+            <div id="release-date-beta"></div>
+          </div>
+        </div>
       </div>
+
+      <script>
+        //get latest release data from GitHub API
+        fetch('https://api.github.com/repos/FSN-TRAD/FSN-FR/releases/latest')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          document.getElementById("release-date").innerHTML = "Dernière mise à jour le " + data.published_at.slice(8,10) + "/" + data.published_at.slice(5,7) + "/" + data.published_at.slice(0,4);
+          document.getElementById("numVer").innerHTML = data.tag_name;
+        });
+
+        fetch('https://api.github.com/repos/FSN-TRAD/FSN-FR-beta/releases/latest')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+          document.getElementById("release-date-beta").innerHTML = "Dernière mise à jour le " + data.published_at.slice(8,10) + "/" + data.published_at.slice(5,7) + "/" + data.published_at.slice(0,4);
+          document.getElementById("numVerBeta").innerHTML = data.name;
+        });
+      </script>
 
       <hr>
 
