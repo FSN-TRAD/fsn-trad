@@ -53,7 +53,8 @@
               <img src="images/download.svg" alt="download">
             </a>
             <a href="https://github.com/FSN-TRAD/FSN-FR/releases/latest/" target="_blank" title="GitHub">Changelog</a>
-            <div id="release-date"></div>
+            <div id="releaseDate">Dernière mise à jour le </div>
+            <!-- <div id="imgRelease"></div> -->
           </div>
           
           <div>
@@ -62,7 +63,7 @@
               <img src="images/download.svg" alt="download">
             </a>
             <a href="https://github.com/FSN-TRAD/FSN-FR-beta/releases/latest/" target="_blank" title="GitHub">Changelog</a>
-            <div id="release-date-beta"></div>
+            <div id="releaseDate-beta">Dernière mise à jour le </div>
           </div>
         </div>
       </div>
@@ -72,16 +73,16 @@
         fetch('https://api.github.com/repos/FSN-TRAD/FSN-FR/releases/latest')
         .then(response => response.json())
         .then(data => {
-          console.log(data);
-          document.getElementById("release-date").innerHTML = "Dernière mise à jour le " + data.published_at.slice(8,10) + "/" + data.published_at.slice(5,7) + "/" + data.published_at.slice(0,4);
+          document.getElementById("releaseDate").innerHTML += data.published_at.slice(8,10) + "/" + data.published_at.slice(5,7) + "/" + data.published_at.slice(0,4);
           document.getElementById("numVer").innerHTML = data.tag_name;
+          // let imgLink = data.body.match(/!\[.*\]\((.*)\)/)[1];
+          // document.getElementById("imgRelease").innerHTML = `<img src="${imgLink}">`;
         });
 
         fetch('https://api.github.com/repos/FSN-TRAD/FSN-FR-beta/releases/latest')
         .then(response => response.json())
         .then(data => {
-          console.log(data);
-          document.getElementById("release-date-beta").innerHTML = "Dernière mise à jour le " + data.published_at.slice(8,10) + "/" + data.published_at.slice(5,7) + "/" + data.published_at.slice(0,4);
+          document.getElementById("releaseDate-beta").innerHTML += data.published_at.slice(8,10) + "/" + data.published_at.slice(5,7) + "/" + data.published_at.slice(0,4);
           document.getElementById("numVerBeta").innerHTML = data.name;
         });
       </script>
