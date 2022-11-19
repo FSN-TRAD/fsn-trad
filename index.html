@@ -26,8 +26,8 @@
   target="_blank" title="Rejoindre le serveur Discord">
     <img src="images/logo_discord.svg">
   </a>
-  <a href="https://github.com/FSN-TRAD/FSN-FR/releases"
-  target="_blank" title="Accéder aux patchs">
+  <a href="https://github.com/FSN-TRAD/"
+  target="_blank" title="Dépôts de l'équipe">
     <img src="images/logo_github.svg">
   </a>
   <a href="https://www.youtube.com/watch?v=9dZbwFyim20&list=PLZoKEkWJICOE4X-0YUScSmIHpKDMSb54g&ab_channel=alucardonacmono"
@@ -64,23 +64,23 @@
 
       <div class="infoVN">
         <div class="gallery">
-          <main class="images">
-                <img src="images/gallery/cg_invocation.jpg" alt="Invocation" onclick="setMainImg(this);">
+          <div class="images">
+            <img src="images/gallery/cg_invocation.jpg" alt="Invocation" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_saber.jpg" alt="Saber" onclick="setMainImg(this);">
+            <img src="images/gallery/cg_saber.jpg" alt="Saber" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_school.jpg" alt="School" onclick="setMainImg(this);">
+            <img src="images/gallery/cg_school.jpg" alt="School" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_archer.jpg" alt="Archer" onclick="setMainImg(this);">
+            <img src="images/gallery/cg_archer.jpg" alt="Archer" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_stone.jpg" alt="Stone" onclick="setMainImg(this);">
+            <img src="images/gallery/cg_stone.jpg" alt="Stone" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_rin.jpg" alt="Rin" onclick="setMainImg(this);">
+            <img src="images/gallery/cg_rin.jpg" alt="Rin" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_tiger_dojo.jpg" alt="Tiger Dojo" onclick="setMainImg(this);">
+            <img src="images/gallery/cg_tiger_dojo.jpg" alt="Tiger Dojo" onclick="setMainImg(this);">
 
-                <img src="images/gallery/cg_bath.jpg" alt="Saber bath" onclick="setMainImg(this, true);">
-          </main>
+            <img src="images/gallery/cg_bath.jpg" alt="Saber bath" onclick="setMainImg(this, true);">
+          </div>
           <div id="mainImgContainer">
             <a data-fancybox="gallery" href="images/gallery/cg_invocation.jpg" id="mainImgLink">
               <img class="visuel" src="images/gallery/cg_invocation.jpg" alt="CG invocation" id="mainImg">
@@ -139,8 +139,9 @@
         button.title = "Non censuré";
         button.id = "buttonH";
         button.onclick = function() {
-          mainImgLink.href = "images/gallery/hcg_bath.jpg"
-          mainImg.src = "images/gallery/hcg_bath.jpg"
+          let imgName = img.src.split("/").pop();
+          mainImgLink.href = "images/gallery/h" + imgName;
+          mainImg.src = "images/gallery/h" + imgName;
         }
         mainImgLink.after(button);
       }
