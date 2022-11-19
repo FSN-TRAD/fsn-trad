@@ -68,13 +68,6 @@ h1 {
 }
 
 /* Galerie */
-#mainImg {
-  height: 300px;
-  width: 400px;
-  max-width: 100%;
-  border-radius: 4px;
-  object-fit: cover;
-}
 .infoVN {
   display: flex;
   flex-direction: row;
@@ -85,32 +78,53 @@ h1 {
   display: flex;
   flex: none;
   margin: 0 auto;
+  position: relative;
+  height: 340px;
 }
-main {
+#mainImgContainer {
+  position: relative;
+}
+#mainImg {
+  height: 340px;
+  width: 450px;
+  max-width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+#buttonH {
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  background-color: var(--secondary-bg-color);
+  border: 0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  filter: drop-shadow(0px 2px 4px black);
+}
+#buttonH:hover {
+  background-color: #464650;
+  filter: drop-shadow(0px 0px 2px #000);
+}
+.images {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 300px;
+  height: 340px;
   min-width: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-main::-webkit-scrollbar {
+.images::-webkit-scrollbar {
   width: 6px; /* width of the entire scrollbar */
 }
 
-main::-webkit-scrollbar-thumb {
+.images::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #1a2580 25%, #32819e 50%, #1a2580 75%); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 8px 0;
-}
-.row {
-  box-sizing: border-box;
-}
 
 /* Style the images inside the grid */
-.column img {
+.images img {
   opacity: 0.8; 
   cursor: pointer; 
   border-radius: 2px;
@@ -118,8 +132,9 @@ main::-webkit-scrollbar-thumb {
   max-width: 100%;
   display: block;
   object-fit: contain;
+  box-sizing: border-box;
 }
-.column img:hover {
+.images img:hover {
   opacity: 1;
 }
 
@@ -127,11 +142,26 @@ main::-webkit-scrollbar-thumb {
   .infoVN {
     flex-direction: column;
   }
+  .gallery {
+    flex-direction: column-reverse;
+    gap: 4px;
+    max-width: 450px;
+    height: auto;
+  }
   #mainImg {
     display: block;
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 4/3;
   }
-  main {
-    min-width: 90px;
+  .images {
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    flex-direction: row;
+  }
+  .images::-webkit-scrollbar {
+    height: 8px;
   }
 }
 
