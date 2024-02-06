@@ -1,6 +1,6 @@
 //delete for normal access to website
-//redirect to https://holofield.fr/fsn-trad
-window.location.replace("https://holofield.fr/fsn-trad")
+//redirect to new website
+window.location.replace("https://fsn-trad.holofield.fr/")
 
 //print the following divs on the page
 const extension = 'html'
